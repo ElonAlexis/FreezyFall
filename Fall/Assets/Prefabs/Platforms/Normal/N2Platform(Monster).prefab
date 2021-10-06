@@ -149,7 +149,7 @@ MonoBehaviour:
   isPlatform: 0
   isSpike: 0
   isBreakable: 0
-  warning: {fileID: 0}
+  warning: {fileID: 998595624556752121, guid: 2a46ef7b820283b4da570fa564506b33, type: 3}
 --- !u!1 &3282449020568337234
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,8 +191,8 @@ GameObject:
   - component: {fileID: 3282449021094307846}
   - component: {fileID: 3282449021094307842}
   - component: {fileID: 3282449021094307843}
-  - component: {fileID: 3282449021094307844}
   - component: {fileID: 3282449021094307845}
+  - component: {fileID: 2777695421846891868}
   m_Layer: 9
   m_Name: Monster
   m_TagString: Untagged
@@ -284,32 +284,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &3282449021094307844
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3282449021094307847}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.12725914, y: -0.0013526231}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.07, y: 0.54}
-    newSize: {x: 1.07, y: 0.54}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3245184, y: 0.51022565}
-  m_EdgeRadius: 0
 --- !u!114 &3282449021094307845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,3 +298,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eatPoint: {fileID: 3282449020568337234}
   Player: {fileID: 0}
+--- !u!68 &2777695421846891868
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282449021094307847}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.108082116, y: -0.18421331}
+  - {x: -0.05131878, y: -0.24525133}
+  - {x: -0.0929257, y: -0.2261405}
+  - {x: -0.25719893, y: -0.20887838}
+  - {x: -0.4704428, y: -0.14060536}
+  - {x: -0.5509292, y: -0.0041496623}
+  - {x: -0.25813258, y: 0.1998259}
+  - {x: -0.024656191, y: 0.25904405}
+  - {x: 0.101597935, y: 0.20911954}
+  - {x: 0.46425408, y: 0.28215316}
+  - {x: 0.29495537, y: 0.1313738}
+  - {x: 0.3397881, y: 0.08146213}
+  - {x: 0.49041694, y: 0.08253974}
+  - {x: 0.46465915, y: -0.266345}
+  - {x: 0.35867062, y: -0.27354243}
+  - {x: 0.11857772, y: -0.18421282}

@@ -7,6 +7,13 @@ public class Invincible : MonoBehaviour
     Collider2D col;
     public GameObject iShield; 
     GameObject shield;
+    float countDown = 14;
+    Animator anim; 
+
+    void Start()
+    {
+        anim = iShield.GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -27,7 +34,10 @@ public class Invincible : MonoBehaviour
 
     IEnumerator Timer()
     {
-        yield return new WaitForSeconds(14);
+        yield return new WaitForSeconds(10);
+        // Play Timeout Animation here
+        ShieldAnimation.anim.SetBool("isFading", true);
+        yield return new WaitForSeconds(5);
         if(col.enabled == false )
         {
             col.enabled = true;

@@ -148,3 +148,4 @@ MonoBehaviour:
   isPlatform: 1
   isSpike: 0
   isBreakable: 0
+  warning: {fileID: 998595624556752121, guid: 2a46ef7b820283b4da570fa564506b33, type: 3}

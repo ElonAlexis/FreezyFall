@@ -5,6 +5,9 @@ using UnityEngine;
 public class Spikespawner : MonoBehaviour
 {
     public GameObject icicle;
+    public GameObject fallWarning;
+    GameObject warning;
+
     float minX = -2, maxX = 2, minY = -5f;
     public float spawnTimer = 2f;
     float currentSpawnTimer;
@@ -40,7 +43,10 @@ public class Spikespawner : MonoBehaviour
 
                 if (spawnCount == 4)
                 {
-                    newPlatform = Instantiate(icicle, position, Quaternion.identity);
+                    warning = Instantiate(fallWarning, position, Quaternion.identity);
+                    warning.transform.localScale = new Vector3(0.05f, 0.05f, 0.1f);
+                    StartCoroutine(DestroyWarning());
+                    StartCoroutine(SpawnDelay());
                     spawnCount = 0;
                 }
 
@@ -50,16 +56,22 @@ public class Spikespawner : MonoBehaviour
                 }
 
                 currentSpawnTimer = 0;
-            }
 
+                IEnumerator SpawnDelay()
+                {
+                    yield return new WaitForSeconds(1);                    
+                    newPlatform = Instantiate(icicle, position, Quaternion.identity);
+                }
+
+                IEnumerator DestroyWarning()
+                {
+                    yield return new WaitForSeconds(1);
+                    Destroy(warning);
+                }
+
+            }            
 
         }
-
-
-
     }
-
-
-
 
 }
