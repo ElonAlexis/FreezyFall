@@ -1274,30 +1274,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 345238284440662354, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
-        type: 3}
-      propertyPath: soundManagerAudio1
+    - target: {fileID: 1360988759, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d, type: 3}
+      propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 1360988758}
+      objectReference: {fileID: 0}
     - target: {fileID: 345238284440662354, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
         type: 3}
-      propertyPath: soundManagerAudio2
+      propertyPath: soundFX2
       value: 
       objectReference: {fileID: 1360988757}
     - target: {fileID: 1545535322621959956, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
         type: 3}
       propertyPath: m_Name
       value: SoundEffectManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 4929896955923896626, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5134065500957396235, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6749985962783132631, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
         type: 3}
@@ -3880,13 +3869,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!82 &1360988757 stripped
 AudioSource:
-  m_CorrespondingSourceObject: {fileID: 4929896955923896626, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
-    type: 3}
-  m_PrefabInstance: {fileID: 260895976}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1360988758 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5134065500957396235, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
+  m_CorrespondingSourceObject: {fileID: 1360988759, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
     type: 3}
   m_PrefabInstance: {fileID: 260895976}
   m_PrefabAsset: {fileID: 0}
@@ -6890,6 +6873,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameMusicManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744876179328656427, guid: d20968a0b1c521a409a65fa46fac48b5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6744876179328656428, guid: d20968a0b1c521a409a65fa46fac48b5,
         type: 3}

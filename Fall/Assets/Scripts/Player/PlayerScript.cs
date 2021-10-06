@@ -111,10 +111,11 @@ public class PlayerScript : MonoBehaviour
 
         if(collision.gameObject.tag == "Coins")
         {
+            //SoundManager.instance.StopClip();
+            SoundManager.instance.CoinClip();
             GameDataManager.AddCoins(25);
             GameSharedUI.instance.UpdateCoinsUIText();
             Destroy(collision.gameObject);
-            SoundManager.instance.CoinClip();
 
         }
         if(collision.gameObject.tag == "Power-Up")

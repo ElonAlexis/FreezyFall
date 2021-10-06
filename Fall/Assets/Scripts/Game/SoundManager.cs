@@ -9,12 +9,15 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField]
     private AudioSource soundFX;
+    [SerializeField]
+    private AudioSource soundFX2;
+
 
     [SerializeField]
     AudioClip landClip, coinClip, iceBreakClip, gameOverClip, fallClip;
 
-    public AudioSource soundManagerAudio1; 
-    public AudioSource soundManagerAudio2; 
+    //public AudioSource soundManagerAudio1; 
+    //public AudioSource soundManagerAudio2; 
 
 
 
@@ -42,9 +45,9 @@ public class SoundManager : MonoBehaviour
     }
     public void CoinClip()
     {
-        soundFX.clip = coinClip;
-        soundFX.volume = 1f;
-        soundFX.Play();
+        soundFX2.clip = coinClip;
+        soundFX2.volume = 1f;
+        soundFX2.Play();
     }
     public void IceBreakClip()
     {

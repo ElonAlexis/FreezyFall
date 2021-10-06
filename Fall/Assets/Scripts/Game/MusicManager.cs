@@ -63,15 +63,15 @@ public class MusicManager : MonoBehaviour
        isPlayingAudio = false;
        musicManagerAudio1.volume = 0;
        musicManagerAudio2.volume = 0;
-       SoundManager.instance.soundManagerAudio1.volume = 0;
-       SoundManager.instance.soundManagerAudio2.volume = 0;
+      // SoundManager.instance.soundManagerAudio1.volume = 0;
+       //SoundManager.instance.soundManagerAudio2.volume = 0;
      }
     public void TurnOnAllAudio()
     {
         isPlayingAudio = true;
         musicManagerAudio1.volume = 1;
         musicManagerAudio2.volume = 1;
-        SoundManager.instance.soundManagerAudio1.volume = 1;
-        SoundManager.instance.soundManagerAudio2.volume = 1;       
+        //SoundManager.instance.soundManagerAudio1.volume = 1;
+        //SoundManager.instance.soundManagerAudio2.volume = 1;       
     }
 }
