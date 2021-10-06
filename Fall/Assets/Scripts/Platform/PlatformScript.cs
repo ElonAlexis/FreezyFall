@@ -30,25 +30,32 @@ public class PlatformScript : MonoBehaviour
         Move();     
         if(GameManager.instance.score < 300)
         {
-            movesSpeed = 2;           
+            PlatformSpawner.spawnTimer = 2.2f;
+            movesSpeed = 1f;           
         }
         else if (GameManager.instance.score > 300 && GameManager.instance.score < 600)
         {
-            movesSpeed = 2.5f;
-     
+            PlatformSpawner.spawnTimer = 1.9f;
+            movesSpeed = 1.5f;     
         }
         else if (GameManager.instance.score > 600 && GameManager.instance.score < 900)
         {
-            movesSpeed = 2.8f;
-         
+            PlatformSpawner.spawnTimer = 1.5f;
+            movesSpeed = 2f;         
         }
         else if (GameManager.instance.score > 900 && GameManager.instance.score < 1200)
         {
-            movesSpeed = 2.8f;
-          
+            PlatformSpawner.spawnTimer = 1.1f;
+            movesSpeed = 2.5f;          
         }
-        else if(GameManager.instance.score > 1500)
+        else if(GameManager.instance.score > 1200 && GameManager.instance.score < 1500)
         {
+            PlatformSpawner.spawnTimer = 1.1f;
+            movesSpeed = 3f;
+        }
+        else if (GameManager.instance.score > 1500)
+        {
+            PlatformSpawner.spawnTimer = 0.8f;
             movesSpeed = 3.5f;
         }
     }

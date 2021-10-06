@@ -13,7 +13,8 @@ public class PlatformSpawner : MonoBehaviour
 
     //public GameObject doubleMonsterPlatform;
 
-    public float spawnTimer = 2f;
+    //public float spawnTimer = 2f;
+    public static float spawnTimer;
     float currentSpawnTimer;
     int spawnCount;
     float minX = -1f, maxX = 1f;
