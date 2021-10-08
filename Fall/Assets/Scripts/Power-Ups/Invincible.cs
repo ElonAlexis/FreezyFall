@@ -23,6 +23,7 @@ public class Invincible : MonoBehaviour
     {
          if(other.gameObject.tag == "Player")
         {
+           gameObject.transform.parent = null;
            shield = Instantiate(iShield, new Vector3(other.gameObject.transform.position.x,other.gameObject.transform.position.y,other.gameObject.transform.position.z +0.03f), Quaternion.identity);
            shield.transform.SetParent(other.gameObject.transform);
            //shield.transform.position = new Vector3(other.gameObject.transform.position.x,other.gameObject.transform.position.y,other.gameObject.transform.position.z +0.03f);

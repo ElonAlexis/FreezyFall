@@ -155,7 +155,8 @@ public class GameManager : MonoBehaviour
         if(count == 3)
         {
             count = 0;
-            ads.PlayAd();
+
+           // ads.PlayAd();                                                                                 Play ads after losing 3 times
         }
     }
 

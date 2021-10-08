@@ -26,6 +26,7 @@ public class WaySmall : MonoBehaviour
     {
          if(other.gameObject.tag == "Player")
         {
+            gameObject.transform.parent = null;
             isSmall = true;
             if(isSmall)
             {

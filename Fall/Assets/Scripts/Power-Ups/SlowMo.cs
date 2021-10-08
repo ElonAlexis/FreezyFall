@@ -9,6 +9,7 @@ public class SlowMo : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            gameObject.transform.parent = null;
             timeManager.SlowMotion();         
             Destroy(gameObject);
         }

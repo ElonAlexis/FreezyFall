@@ -10,8 +10,8 @@ public class PlatformSpawner : MonoBehaviour
     public GameObject breakablePlatform;
     public GameObject monsterPlatform;
     public GameObject coinPlatform;
-
-    //public GameObject doubleMonsterPlatform;
+    public GameObject powerupPlatform;
+    
 
     //public float spawnTimer = 2f;
     public static float spawnTimer;
@@ -69,9 +69,7 @@ public class PlatformSpawner : MonoBehaviour
                 else
                 {
                     newPlatform = Instantiate(breakablePlatform, position, Quaternion.identity);
-                }
-
-               
+                }               
             }
             else if (spawnCount == 4)
             {
@@ -83,11 +81,8 @@ public class PlatformSpawner : MonoBehaviour
                 {
                     newPlatform = Instantiate(monsterPlatform, position , Quaternion.identity);
                 }
-
-                //spawnCount = 0;
             }
-
-            else if (spawnCount == 5)       // Code for double monster spawn 
+            else if (spawnCount == 5)       // Code for coin spawn 
             {
                 if (Random.Range(0, 3) > 0)
                 {
@@ -96,6 +91,17 @@ public class PlatformSpawner : MonoBehaviour
                 else
                 {
                     newPlatform = Instantiate(coinPlatform, position, Quaternion.identity);
+                }
+            }
+            else if (spawnCount == 6)       // Code for power-ups spawn 
+            {
+                if (Random.Range(0, 2) > 0)
+                {
+                    newPlatform = Instantiate(normalPlatform, position, Quaternion.identity);
+                }
+                else
+                {
+                    newPlatform = Instantiate(powerupPlatform, position, Quaternion.identity);
                 }
 
                 spawnCount = 0;
