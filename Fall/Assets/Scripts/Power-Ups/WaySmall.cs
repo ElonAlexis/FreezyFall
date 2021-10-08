@@ -8,12 +8,14 @@ public class WaySmall : MonoBehaviour
     Rigidbody2D rb;
     GameObject player;
     GameObject skin;
+    Animator anim; 
 
     bool isSmall = false; 
 
     void Start()
     {
         player = GameObject.Find("Player");
+        anim = player.GetComponent<Animator>();
     }
     void Update()
     {
@@ -33,7 +35,7 @@ public class WaySmall : MonoBehaviour
                 other.gameObject.transform.localScale = new Vector3 (0.3f,0.3f,0.3f);
             }           
             rb = other.gameObject.GetComponent<Rigidbody2D>();
-            rb.gravityScale = 2f;
+            rb.gravityScale = 0.2f;
             playerScript  = other.gameObject.GetComponent<PlayerScript>();
             playerScript.moveSpeed += 1;
             gameObject.transform.position = new Vector3(5,5,5);
@@ -44,9 +46,11 @@ public class WaySmall : MonoBehaviour
 
     IEnumerator Timer()
     {
-        Debug.Log("Started");
-        yield return new WaitForSeconds(7);    
-        Debug.Log("Reached");
+        yield return new WaitForSeconds(3);
+        // Play animation 
+        //anim.SetBool("smallEnding", true);
+        yield return new WaitForSeconds(4);    
+       // anim.SetBool("smallEnding", false);
         isSmall = false;
         rb.gravityScale = 0.6f;
         playerScript.moveSpeed = 3;
