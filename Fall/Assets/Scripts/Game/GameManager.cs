@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
 
 
 
-    bool isLevel1 = false;
+    //bool isLevel1 = false;
     bool adIsPlayed;
 
     // Start is called before the first frame update
@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+
 
         //PlayerPrefs.DeleteKey("HighScore");
 
@@ -102,7 +103,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
-        isLevel1 = true;
+        //isLevel1 = true;
         SceneManager.LoadScene(1);
         MusicManager.instance.StopOtherOne();
         MusicManager.instance.GameMusicClip();

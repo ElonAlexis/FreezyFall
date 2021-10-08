@@ -7,7 +7,6 @@ public class Invincible : MonoBehaviour
     Collider2D col;
     public GameObject iShield; 
     GameObject shield;
-    float countDown = 14;
     Animator anim; 
 
     void Start()

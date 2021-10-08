@@ -15,7 +15,6 @@ public class MusicManager : MonoBehaviour
 
     public GameObject audioOnButton; 
     public GameObject audioOffButton;
-    bool isPlayingAudio; 
 
     [SerializeField]
      AudioClip menuMusic, gameMusic, creditsMusic; 
@@ -30,7 +29,7 @@ public class MusicManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this);
         }
-        isPlayingAudio = true; 
+      
     }
 
     public void MainMenuClip()
@@ -60,7 +59,7 @@ public class MusicManager : MonoBehaviour
     
     public void TurnOffAllAudio()
     {
-       isPlayingAudio = false;
+     
        musicManagerAudio1.volume = 0;
        musicManagerAudio2.volume = 0;
       // SoundManager.instance.soundManagerAudio1.volume = 0;
@@ -68,7 +67,7 @@ public class MusicManager : MonoBehaviour
      }
     public void TurnOnAllAudio()
     {
-        isPlayingAudio = true;
+       
         musicManagerAudio1.volume = 1;
         musicManagerAudio2.volume = 1;
         //SoundManager.instance.soundManagerAudio1.volume = 1;

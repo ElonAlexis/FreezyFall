@@ -20,48 +20,48 @@ MonoBehaviour:
   - image: {fileID: 21300000, guid: e49377e7e7a59324e9553529da0d36dd, type: 3}
     name: CatFace
     price: 100
-    isPurchased: 0
+    isPurchased: 1
   - image: {fileID: 21300000, guid: 1b5d145c8a28eca47be1295230761aac, type: 3}
     name: "Im\u014Dto"
     price: 300
-    isPurchased: 0
+    isPurchased: 1
   - image: {fileID: 21300000, guid: 977abc887a260774a88cbae9cbc0bd55, type: 3}
     name: Girly
     price: 300
-    isPurchased: 0
+    isPurchased: 1
   - image: {fileID: 21300000, guid: 3ee89cb9b34be114897f0aee5f6b495c, type: 3}
     name: Star
     price: 300
-    isPurchased: 0
+    isPurchased: 1
   - image: {fileID: 21300000, guid: 22d20f344fdfa3747a8136ae646f3ae5, type: 3}
     name: Nerd
     price: 500
-    isPurchased: 0
+    isPurchased: 1
   - image: {fileID: 21300000, guid: 6624172db57b37d48a51ed422ba47d4d, type: 3}
     name: Psycho
     price: 500
-    isPurchased: 0
+    isPurchased: 1
   - image: {fileID: 21300000, guid: ec945e31a2478cb4b9fda34e18c0153a, type: 3}
     name: Blind Cube
     price: 500
-    isPurchased: 0
+    isPurchased: 1
   - image: {fileID: 21300000, guid: 4b9f4b4701cf4b7428ce748a0f1cd69f, type: 3}
     name: EA Bolt
     price: 1000
-    isPurchased: 0
+    isPurchased: 1
   - image: {fileID: 21300000, guid: f23704da1eb95c2489b3e3be6fc1f7a0, type: 3}
     name: Fire
     price: 1000
-    isPurchased: 0
+    isPurchased: 1
   - image: {fileID: 21300000, guid: f002aae49ec32d044882f568fc1397f3, type: 3}
     name: Star
     price: 1500
-    isPurchased: 0
+    isPurchased: 1
   - image: {fileID: 21300000, guid: cace39f6ace3bfd42836f97817a4ad73, type: 3}
     name: Angry
     price: 100
-    isPurchased: 0
+    isPurchased: 1
   - image: {fileID: 21300000, guid: 88e1e0365908de04a869ad118ecf087e, type: 3}
     name: Flurby
     price: 2000
-    isPurchased: 0
+    isPurchased: 1
