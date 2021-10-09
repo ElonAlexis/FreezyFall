@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
 
     [SerializeField] GameObject watchAdsButton;
+    [SerializeField] GameObject newHighScoreText = null;
+
     [SerializeField] AdsMAnager ads; 
     
     GameObject GameMusicManager; 
@@ -32,6 +34,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI highScoreText;
     [SerializeField] TextMeshProUGUI goScoreText = null;
     [SerializeField] TextMeshProUGUI goHighScoreText = null;
+    [SerializeField] TextMeshProUGUI newHighScoreTextText = null;
+
+
 
 
     [SerializeField] ParticleSystem confettiParticles = null;
@@ -50,8 +55,7 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
 
-
-        //PlayerPrefs.DeleteKey("HighScore");
+        //PlayerPrefs.DeleteKey("HighScore");                                                       // Delete current Highscore 
 
         highScoreText.text = "HighScore: " + Mathf.Round(PlayerPrefs.GetFloat("HighScore"));
         if(goHighScoreText != null)
@@ -146,8 +150,10 @@ public class GameManager : MonoBehaviour
         isScoring = false;
         if(PlayerPrefs.GetFloat("HighScore") < score)
         {
-            //SpawnConfetti();
+            SpawnConfetti();
             PlayerPrefs.SetFloat("HighScore", score);
+            newHighScoreText.SetActive(true);
+            newHighScoreTextText.text = scoreText.text;
         }      
 
         Time.timeScale = 0f;
@@ -165,8 +171,8 @@ public class GameManager : MonoBehaviour
     {
         ads.PlayRewardedAd(OnRewardedAdSuccess);
         // Give player a reward for watching the ad
-        Debug.Log("You gained 100 coins");
-        GameDataManager.AddCoins(100);
+        Debug.Log("You gained 500 coins");
+        GameDataManager.AddCoins(500);
     }
 
     void OnRewardedAdSuccess()

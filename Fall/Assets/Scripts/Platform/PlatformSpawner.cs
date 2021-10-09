@@ -47,8 +47,7 @@ public class PlatformSpawner : MonoBehaviour
             if (spawnCount < 2)
             {
                 newPlatform = Instantiate(normalPlatform, position, Quaternion.identity);
-            }         
-           
+            }              
             else if(spawnCount == 2)
             {
                 if (Random.Range(0, 2) > 0)
@@ -93,9 +92,9 @@ public class PlatformSpawner : MonoBehaviour
                     newPlatform = Instantiate(coinPlatform, position, Quaternion.identity);
                 }
             }
-            else if (spawnCount == 6)       // Code for power-ups spawn 
+            else if (spawnCount == 6)       // Code for power-up platform 
             {
-                if (Random.Range(0, 5) > 0)
+                if (Random.Range(0, 10) > 0)
                 {
                     newPlatform = Instantiate(normalPlatform, position, Quaternion.identity);
                 }
