@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MenuFallingScript : MonoBehaviour
 {
-    float minY = -15f, maxY = 6f;
-    float movesSpeed =5f;
-    float minX = -2f, maxX = 2f;
+    float minY = -0.541f, maxY = 3f;
+    float movesSpeed =0.5f;
+    float minX = -0.241f, maxX = 0.247f;
 
     // Update is called once per frame
     void Update()
