@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
 
         if (isScoring)
         {
-            score += 10 * Time.deltaTime;
+            score += 10 * Time.unscaledDeltaTime;
         }
 
         if(adIsPlayed)
