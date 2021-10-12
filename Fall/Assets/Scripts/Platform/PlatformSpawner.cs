@@ -94,7 +94,7 @@ public class PlatformSpawner : MonoBehaviour
             }
             else if (spawnCount == 6)       // Code for power-up platform 
             {
-                if (Random.Range(0, 10) > 0)
+                if (Random.Range(0, 7) > 0)
                 {
                     newPlatform = Instantiate(normalPlatform, position, Quaternion.identity);
                 }

@@ -250,7 +250,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/elona/Documents/FreezyFall Assets/FreezyFall App
+  AndroidKeystoreName: D:/PC Files (Windows 10)/FreezyFall Assets/FreezyFall App
     Key/user.keystore
   AndroidKeyaliasName: mykey
   AndroidBuildApkPerCpuArchitecture: 0

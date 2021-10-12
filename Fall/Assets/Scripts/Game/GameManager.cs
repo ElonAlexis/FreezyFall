@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] ParticleSystem confettiParticles = null;
     [SerializeField] ParticleSystem confettiParticles2 = null;
+    [SerializeField] ParticleSystem confettiParticles3 = null;
+    [SerializeField] ParticleSystem confettiParticles4 = null;
 
 
 
@@ -78,7 +80,7 @@ public class GameManager : MonoBehaviour
 
         if (isScoring)
         {
-            score += 10 * Time.unscaledDeltaTime;
+            score += 10 * Time.deltaTime;
         }
 
         if(adIsPlayed)
@@ -153,7 +155,7 @@ public class GameManager : MonoBehaviour
             SpawnConfetti();
             PlayerPrefs.SetFloat("HighScore", score);
             newHighScoreText.SetActive(true);
-            newHighScoreTextText.text = scoreText.text;
+            newHighScoreTextText.text = goScoreText.text;
         }      
 
         Time.timeScale = 0f;
@@ -188,6 +190,8 @@ public class GameManager : MonoBehaviour
     {
         confettiParticles.Play();
         confettiParticles2.Play();
+        confettiParticles3.Play();
+        confettiParticles4.Play();
 
     }
 
