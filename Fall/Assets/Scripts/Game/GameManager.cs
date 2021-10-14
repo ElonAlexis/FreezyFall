@@ -132,7 +132,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);  
         Time.timeScale = 1f;   
         MusicManager.instance.StopOtherOne();
-        MusicManager.instance.MainMenuClip();         
+        MusicManager.instance.MainMenuClip();
     }
 
     public void Resume()

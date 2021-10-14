@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class MusicManager : MonoBehaviour
 {
@@ -11,13 +13,23 @@ public class MusicManager : MonoBehaviour
     private AudioSource soundFX;
     public AudioSource musicManagerAudio1; 
     public AudioSource musicManagerAudio2; 
-    public AudioSource otherOne; 
-
-    public GameObject audioOnButton; 
-    public GameObject audioOffButton;
+    public AudioSource otherOne;
 
     [SerializeField]
-     AudioClip menuMusic, gameMusic, creditsMusic; 
+    GameObject Audio;
+    [SerializeField]
+    GameObject ON;
+    public SpriteRenderer audioOnButton;
+    [SerializeField]
+    GameObject OFF; 
+    public SpriteRenderer audioOffButton;
+
+    [SerializeField]
+     AudioClip menuMusic, gameMusic, creditsMusic;
+
+    public bool isPlaying; 
+
+
      void Awake()
     {
         if(instance != null)
@@ -29,7 +41,12 @@ public class MusicManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this);
         }
-      
+        DontDestroyOnLoad(Audio);
+
+        audioOnButton = ON.GetComponent<SpriteRenderer>();
+        audioOffButton = OFF.GetComponent<SpriteRenderer>();
+
+        isPlaying = true;
     }
 
     public void MainMenuClip()
@@ -56,20 +73,34 @@ public class MusicManager : MonoBehaviour
     {
         otherOne.enabled = false;
     }
-    
+    public void OnButtonPress()
+    {
+        if(isPlaying)
+        {
+            TurnOffAllAudio();
+        }
+        else 
+        {
+            TurnOnAllAudio();
+        }
+    }
     public void TurnOffAllAudio()
     {
-     
-       musicManagerAudio1.volume = 0;
-       musicManagerAudio2.volume = 0;
+        audioOnButton.enabled = false;
+        audioOffButton.enabled = true;
+        musicManagerAudio1.volume = 0;
+        musicManagerAudio2.volume = 0;
+        isPlaying = false;
       // SoundManager.instance.soundManagerAudio1.volume = 0;
        //SoundManager.instance.soundManagerAudio2.volume = 0;
      }
     public void TurnOnAllAudio()
     {
-       
+        audioOnButton.enabled = true;
+        audioOffButton.enabled = false;
         musicManagerAudio1.volume = 1;
         musicManagerAudio2.volume = 1;
+        isPlaying = true;
         //SoundManager.instance.soundManagerAudio1.volume = 1;
         //SoundManager.instance.soundManagerAudio2.volume = 1;       
     }
