@@ -48,11 +48,11 @@ public class PlayerScript : MonoBehaviour
         {
             Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            if (mousepos.x > 1)
+            if (mousepos.x > 5)
             {
                 rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
             }
-            else if (mousepos.x < -1)
+            else if (mousepos.x < 5)
             {
                 rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
             }

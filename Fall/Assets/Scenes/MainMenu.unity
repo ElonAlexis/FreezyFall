@@ -813,6 +813,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &139470898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1820025912141772501, guid: c6b968a45fc36684dbf53256820d4e3a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1820025912845007499}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &160866179
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,6 +1234,16 @@ PrefabInstance:
       propertyPath: soundFX2
       value: 
       objectReference: {fileID: 1360988757}
+    - target: {fileID: 345238284440662354, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
+        type: 3}
+      propertyPath: soundFX3
+      value: 
+      objectReference: {fileID: 1360988758}
+    - target: {fileID: 345238284440662354, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
+        type: 3}
+      propertyPath: iceBreakClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1db164d6e08e4384c84faf30852213a7, type: 3}
     - target: {fileID: 1545535322621959956, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
         type: 3}
       propertyPath: m_Name
@@ -1438,6 +1454,39 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 0}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1299894453}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 139470898}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6804611874989884769}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -2035,6 +2084,17 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 6804611874989884769}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1299894453}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -2819,7 +2879,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1299894453}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6804611874989884769}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 139470898}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -4002,6 +4084,12 @@ GameObject:
 --- !u!82 &1360988757 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 1360988759, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
+    type: 3}
+  m_PrefabInstance: {fileID: 260895976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1360988758 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4929896955923896626, guid: 1f350dbd9f8e7b34190cfd20f1cf4c9d,
     type: 3}
   m_PrefabInstance: {fileID: 260895976}
   m_PrefabAsset: {fileID: 0}
@@ -6455,6 +6543,17 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 6804611874989884769}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1299894453}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:

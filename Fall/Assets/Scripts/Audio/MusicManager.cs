@@ -25,7 +25,7 @@ public class MusicManager : MonoBehaviour
     public SpriteRenderer audioOffButton;
 
     [SerializeField]
-     AudioClip menuMusic, gameMusic, creditsMusic;
+     AudioClip menuMusic, gameMusic, creditsMusic, gameOverMusic;
 
     public bool isPlaying; 
 
@@ -59,9 +59,14 @@ public class MusicManager : MonoBehaviour
         soundFX.clip = gameMusic;
         soundFX.Play();
     }
-     public void CreditsClip()
+    public void CreditsClip()
     {
         soundFX.clip = creditsMusic;
+        soundFX.Play();
+    }
+    public void GameOverClip()
+    {
+        soundFX.clip = gameOverMusic;
         soundFX.Play();
     }
 
@@ -90,6 +95,7 @@ public class MusicManager : MonoBehaviour
         audioOffButton.enabled = true;
         musicManagerAudio1.volume = 0;
         musicManagerAudio2.volume = 0;
+        SoundManager.instance.StopClip();
         isPlaying = false;
       // SoundManager.instance.soundManagerAudio1.volume = 0;
        //SoundManager.instance.soundManagerAudio2.volume = 0;
@@ -100,6 +106,8 @@ public class MusicManager : MonoBehaviour
         audioOffButton.enabled = false;
         musicManagerAudio1.volume = 1;
         musicManagerAudio2.volume = 1;
+        SoundManager.instance.PlayClip();
+
         isPlaying = true;
         //SoundManager.instance.soundManagerAudio1.volume = 1;
         //SoundManager.instance.soundManagerAudio2.volume = 1;       

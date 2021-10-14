@@ -148,6 +148,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+
         gameOverMenu.SetActive(true);
         isScoring = false;
         if(PlayerPrefs.GetFloat("HighScore") < score)
@@ -161,7 +162,11 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
         adIsPlayed = false;
         count = count + 1;
-        if(count == 3)
+        //MusicManager.instance.StopClip();
+        MusicManager.instance.StopOtherOne();
+        MusicManager.instance.MainMenuClip();
+
+        if (count == 3)
         {
             count = 0;
 

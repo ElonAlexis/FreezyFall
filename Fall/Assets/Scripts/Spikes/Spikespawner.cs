@@ -8,7 +8,7 @@ public class Spikespawner : MonoBehaviour
     public GameObject fallWarning;
     GameObject warning;
 
-    float minX = -2, maxX = 2, minY = -5f;
+    float minX = 2.3f, maxX = 7.5f, minY = -5f;
     public float spawnTimer = 2f;
     float currentSpawnTimer;
     int spawnCount;
@@ -43,6 +43,7 @@ public class Spikespawner : MonoBehaviour
 
                 if (spawnCount == 4)
                 {
+                    SoundManager.instance.IceBreakClip();
                     warning = Instantiate(fallWarning, position, Quaternion.identity);
                     warning.transform.localScale = new Vector3(0.05f, 0.05f, 0.1f);
                     StartCoroutine(DestroyWarning());

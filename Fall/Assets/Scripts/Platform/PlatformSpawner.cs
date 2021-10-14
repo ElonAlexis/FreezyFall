@@ -17,7 +17,7 @@ public class PlatformSpawner : MonoBehaviour
     public static float spawnTimer;
     float currentSpawnTimer;
     int spawnCount;
-    float minX = -1f, maxX = 1f;
+    float minX = 3.7f, maxX = 6.2f;
 
 
     // Start is called before the first frame update

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerRestrict : MonoBehaviour
 {
-    float minX = -2f, maxX = 2f, minY = -5f, maxY = 5.2f;
+    float minX = 2.7f, maxX = 7.1f, minY = -5f, maxY = 5.2f;
 
     // Update is called once per frame
     void Update()
