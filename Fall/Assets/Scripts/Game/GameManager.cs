@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI highScoreText;
     [SerializeField] TextMeshProUGUI goScoreText = null;
+    [SerializeField] TextMeshProUGUI goHighScoreScoreText = null;
     [SerializeField] TextMeshProUGUI goHighScoreText = null;
     [SerializeField] TextMeshProUGUI newHighScoreTextText = null;
 
@@ -60,13 +61,15 @@ public class GameManager : MonoBehaviour
         //PlayerPrefs.DeleteKey("HighScore");                                                       // Delete current Highscore 
 
         highScoreText.text = "HighScore: " + Mathf.Round(PlayerPrefs.GetFloat("HighScore"));
-        if(goHighScoreText != null)
+        if(goHighScoreScoreText != null)
         {
-            goHighScoreText.text = "" + Mathf.Round(PlayerPrefs.GetFloat("HighScore"));
+            goHighScoreScoreText.text = "" + Mathf.Round(PlayerPrefs.GetFloat("HighScore"));
         }
 
         GameMusicManager = GameObject.Find("GameMusicManager");
         SoundEffectsManager = GameObject.Find("SoundEffectManager");
+
+      
 
     }
     private void Update()
@@ -133,6 +136,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;   
         MusicManager.instance.StopOtherOne();
         MusicManager.instance.MainMenuClip();
+        adIsPlayed = false;
     }
 
     public void Resume()
@@ -153,6 +157,7 @@ public class GameManager : MonoBehaviour
         isScoring = false;
         if(PlayerPrefs.GetFloat("HighScore") < score)
         {
+            goHighScoreText.text = "LastHighScore: ";
             SpawnConfetti();
             PlayerPrefs.SetFloat("HighScore", score);
             newHighScoreText.SetActive(true);
@@ -160,7 +165,6 @@ public class GameManager : MonoBehaviour
         }      
 
         Time.timeScale = 0f;
-        adIsPlayed = false;
         count = count + 1;
         //MusicManager.instance.StopClip();
         MusicManager.instance.StopOtherOne();
@@ -184,9 +188,6 @@ public class GameManager : MonoBehaviour
 
     void OnRewardedAdSuccess()
     {
-        // Restart level after watching ad
-        //LevelRestart();
-
         // Set adIsPlayed to true to stop player from continuously clicking and getting coins
         adIsPlayed = true;
     }

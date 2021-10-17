@@ -10,6 +10,8 @@ TagManager:
   - Power-Up
   - Skins
   - TopSpikes
+  - ScreamON
+  - ScreamOFF
   layers:
   - Default
   - TransparentFX

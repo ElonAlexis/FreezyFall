@@ -28,7 +28,7 @@ public class SoundManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(this);
-        }
+        }        
     }
 
   public void LandClip()
@@ -87,8 +87,6 @@ public class SoundManager : MonoBehaviour
         soundFX.Play();
         soundFX2.Play();
         soundFX3.Play();
-
-
     }
 
 

@@ -14,23 +14,22 @@ public class MusicManager : MonoBehaviour
     public AudioSource musicManagerAudio1; 
     public AudioSource musicManagerAudio2; 
     public AudioSource otherOne;
-
-    [SerializeField]
-    GameObject Audio;
-    [SerializeField]
+    
     GameObject ON;
-    public SpriteRenderer audioOnButton;
-    [SerializeField]
+    SpriteRenderer audioOnButton;
+    
     GameObject OFF; 
-    public SpriteRenderer audioOffButton;
+    SpriteRenderer audioOffButton;
 
     [SerializeField]
      AudioClip menuMusic, gameMusic, creditsMusic, gameOverMusic;
 
-    public bool isPlaying; 
+    public bool isPlaying;
+
+    public int prefs;
 
 
-     void Awake()
+    void Awake()
     {
         if(instance != null)
         {
@@ -41,12 +40,29 @@ public class MusicManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(this);
         }
-        DontDestroyOnLoad(Audio);
-
+        //DontDestroyOnLoad(Audio);
+        isPlaying = true;
+    }
+    void Start()
+    {
+        PlayerPrefs.SetInt("AudioState", 1);
+    }
+    void Update()
+    {
+        ON = GameObject.FindGameObjectWithTag("ScreamON");
+        OFF = GameObject.FindGameObjectWithTag("ScreamOFF");
         audioOnButton = ON.GetComponent<SpriteRenderer>();
         audioOffButton = OFF.GetComponent<SpriteRenderer>();
 
-        isPlaying = true;
+        prefs = PlayerPrefs.GetInt("AudioState");
+        if (prefs == 1)
+        {
+            TurnOnAllAudio();
+        }
+        else
+        {
+            TurnOffAllAudio();
+        }
     }
 
     public void MainMenuClip()
@@ -83,33 +99,32 @@ public class MusicManager : MonoBehaviour
         if(isPlaying)
         {
             TurnOffAllAudio();
+            SoundManager.instance.StopClip();
+
         }
         else 
         {
             TurnOnAllAudio();
+            SoundManager.instance.PlayClip();
+
         }
     }
     public void TurnOffAllAudio()
     {
+        PlayerPrefs.SetInt("AudioState", 0);
         audioOnButton.enabled = false;
         audioOffButton.enabled = true;
         musicManagerAudio1.volume = 0;
         musicManagerAudio2.volume = 0;
-        SoundManager.instance.StopClip();
         isPlaying = false;
-      // SoundManager.instance.soundManagerAudio1.volume = 0;
-       //SoundManager.instance.soundManagerAudio2.volume = 0;
      }
     public void TurnOnAllAudio()
     {
+        PlayerPrefs.SetInt("AudioState", 1);
         audioOnButton.enabled = true;
         audioOffButton.enabled = false;
         musicManagerAudio1.volume = 1;
         musicManagerAudio2.volume = 1;
-        SoundManager.instance.PlayClip();
-
-        isPlaying = true;
-        //SoundManager.instance.soundManagerAudio1.volume = 1;
-        //SoundManager.instance.soundManagerAudio2.volume = 1;       
+        isPlaying = true;       
     }
 }
