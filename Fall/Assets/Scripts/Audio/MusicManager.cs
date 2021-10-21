@@ -22,9 +22,14 @@ public class MusicManager : MonoBehaviour
     SpriteRenderer audioOffButton;
 
     [SerializeField]
+    GameObject audioTxt;
+
+    [SerializeField]
      AudioClip menuMusic, gameMusic, creditsMusic, gameOverMusic;
 
     public bool isPlaying;
+    public bool hide;
+
 
     public int prefs;
 
@@ -54,15 +59,8 @@ public class MusicManager : MonoBehaviour
         audioOnButton = ON.GetComponent<SpriteRenderer>();
         audioOffButton = OFF.GetComponent<SpriteRenderer>();
 
-        prefs = PlayerPrefs.GetInt("AudioState");
-        if (prefs == 1)
-        {
-            TurnOnAllAudio();
-        }
-        else
-        {
-            TurnOffAllAudio();
-        }
+        AudioCheckingUpdate();
+
     }
 
     public void MainMenuClip()
@@ -100,13 +98,11 @@ public class MusicManager : MonoBehaviour
         {
             TurnOffAllAudio();
             SoundManager.instance.StopClip();
-
         }
         else 
         {
             TurnOnAllAudio();
             SoundManager.instance.PlayClip();
-
         }
     }
     public void TurnOffAllAudio()
@@ -127,4 +123,35 @@ public class MusicManager : MonoBehaviour
         musicManagerAudio2.volume = 1;
         isPlaying = true;       
     }
+
+    void AudioCheckingUpdate()
+    {
+        prefs = PlayerPrefs.GetInt("AudioState");
+        if (prefs == 1)
+        {
+            TurnOnAllAudio();
+            if (hide)
+            {
+                audioOnButton.enabled = false;
+            }
+            else
+            {
+                audioOnButton.enabled = true;
+            }
+
+        }
+        else if (prefs == 0)
+        {
+            TurnOffAllAudio();
+            if (hide)
+            {
+                audioOffButton.enabled = false;  
+            }
+            else
+            {
+                audioOffButton.enabled = true;
+            }
+        }
+    }
+   
 }

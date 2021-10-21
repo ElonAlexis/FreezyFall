@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class OnButtonClick : MonoBehaviour
 {
-    
+
     void OnMouseDown()
     {
-        MusicManager.instance.OnButtonPress();        
+        MusicManager.instance.OnButtonPress();
     }
 }
