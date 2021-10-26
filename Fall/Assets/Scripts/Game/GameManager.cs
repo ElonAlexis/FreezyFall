@@ -169,13 +169,15 @@ public class GameManager : MonoBehaviour
         //MusicManager.instance.StopClip();
         MusicManager.instance.StopOtherOne();
         MusicManager.instance.MainMenuClip();
-
-        if (count == 3)
+        if(PlayerPrefs.HasKey("ads") == false)
         {
-            count = 0;
-
-           // ads.PlayAd();                                                                                 Play ads after losing 3 times
+            if (count == 3)
+            {
+                count = 0;
+                ads.PlayAd();                                                                                // Play ads after losing 3 times
+            }
         }
+            
     }
 
     public void GetHundredCoins()

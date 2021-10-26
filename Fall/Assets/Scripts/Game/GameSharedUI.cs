@@ -18,11 +18,19 @@ public class GameSharedUI : MonoBehaviour
 
     #endregion
 
-    [SerializeField] TMP_Text[] coinsUIText; 
+    [SerializeField] TMP_Text[] coinsUIText;
+
+    public static GameSharedUI gsui;
 
     void Start()
     {
+        gsui = this;
         UpdateCoinsUIText();
+    }
+
+    void Update()
+    {
+       
     }
 
     public void UpdateCoinsUIText()

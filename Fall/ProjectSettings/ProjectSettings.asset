@@ -172,7 +172,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.BreadFruitGaming.FreezyFall
   buildNumber: {}
-  AndroidBundleVersionCode: 8
+  AndroidBundleVersionCode: 12
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -250,7 +250,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/PC Files (Windows 10)/FreezyFall Assets/FreezyFall App
+  AndroidKeystoreName: E:/PC Files (Windows 10)/FreezyFall Assets/FreezyFall App
     Key/user.keystore
   AndroidKeyaliasName: mykey
   AndroidBuildApkPerCpuArchitecture: 0
