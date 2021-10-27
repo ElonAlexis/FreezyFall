@@ -8,7 +8,7 @@ public class Spikespawner : MonoBehaviour
     public GameObject fallWarning;
     GameObject warning;
 
-    float minX = 2.3f, maxX = 7.5f, minY = -5f;
+    float minX = 2.65f, maxX = 7.2f, minY = -5f;
     public float spawnTimer = 2f;
     float currentSpawnTimer;
     int spawnCount;

@@ -25,7 +25,7 @@ public class MusicManager : MonoBehaviour
     GameObject audioTxt;
 
     [SerializeField]
-     AudioClip menuMusic, gameMusic, creditsMusic, gameOverMusic;
+     AudioClip menuMusic, gameMusic, creditsMusic, snowyMusic;
 
     public bool isPlaying;
     public bool hide;
@@ -68,6 +68,12 @@ public class MusicManager : MonoBehaviour
         soundFX.clip = menuMusic;
         soundFX.Play();
     }
+    public void SnowyClip()
+    {
+        soundFX.clip = snowyMusic;
+        soundFX.Play();
+    }
+
     public void GameMusicClip()
     {
         soundFX.clip = gameMusic;
@@ -77,16 +83,19 @@ public class MusicManager : MonoBehaviour
     {
         soundFX.clip = creditsMusic;
         soundFX.Play();
-    }
-    public void GameOverClip()
-    {
-        soundFX.clip = gameOverMusic;
-        soundFX.Play();
-    }
+    }   
 
     public void StopClip()
     {
         soundFX.Stop();
+    }
+    public void PlayClip()
+    {
+        soundFX.Play();
+    }
+    public void PauseClip()
+    {
+        soundFX.Pause();
     }
     public void StopOtherOne()
     {

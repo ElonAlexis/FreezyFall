@@ -105,13 +105,12 @@ public class PlayerScript : MonoBehaviour
         if(collision.gameObject.tag == "Platform" )
         {
             isGrounded = true;
-            SoundManager.instance.StopClip();
+            SoundManager.instance.StopFallClip();
             SoundManager.instance.LandClip();
         }
 
         if(collision.gameObject.tag == "Coins")
         {
-            //SoundManager.instance.StopClip();
             SoundManager.instance.CoinClip();
             GameDataManager.AddCoins(25);
             GameSharedUI.instance.UpdateCoinsUIText();

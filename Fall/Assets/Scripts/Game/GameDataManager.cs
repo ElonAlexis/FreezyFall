@@ -59,12 +59,12 @@ public static class GameDataManager
     static void LoadPlayerData()
     {
         playerData = BinarySerializer.Load<PlayerData>("player-data.txt");
-        UnityEngine.Debug.Log("color=green>[PlayerData] Loaded.</color>");
+       // UnityEngine.Debug.Log("color=green>[PlayerData] Loaded.</color>");
     }
     static void SavePlayerData()
     {
         BinarySerializer.Save(playerData, "player-data.txt");
-        UnityEngine.Debug.Log("color=magenta>[PlayerData] Loaded.</color>");
+       // UnityEngine.Debug.Log("color=magenta>[PlayerData] Loaded.</color>");
     }
 
     //Character Shop Data Methods ----------------------------------------------------------
@@ -86,12 +86,12 @@ public static class GameDataManager
      static void LoadCharacterShopData()
     {
         characterShopData = BinarySerializer.Load<CharacterShopData>("character-shop-data.txt");
-        UnityEngine.Debug.Log("color=green>[CharacterShopData] Loaded.</color>");
+       // UnityEngine.Debug.Log("color=green>[CharacterShopData] Loaded.</color>");
     }
     static void SaveCharacterShopData()
     {
         BinarySerializer.Save(characterShopData, "character-shop-data.txt");
-        UnityEngine.Debug.Log("color=magenta>[CharacterShopData] Loaded.</color>");
+       // UnityEngine.Debug.Log("color=magenta>[CharacterShopData] Loaded.</color>");
     }
 
 }

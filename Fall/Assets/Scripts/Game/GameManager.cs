@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
 
+        //PlayerPrefs.DeleteAll();                                                                     // Delete all player prefs 
         //PlayerPrefs.DeleteKey("HighScore");                                                       // Delete current Highscore 
 
         highScoreText.text = "HighScore: " + Mathf.Round(PlayerPrefs.GetFloat("HighScore"));
@@ -68,9 +69,6 @@ public class GameManager : MonoBehaviour
 
         GameMusicManager = GameObject.Find("GameMusicManager");
         SoundEffectsManager = GameObject.Find("SoundEffectManager");
-
-      
-
     }
     private void Update()
     {
@@ -142,33 +140,39 @@ public class GameManager : MonoBehaviour
     public void Resume()
     {
         pauseMenu.SetActive(false);
-        Time.timeScale = 1f; 
+        Time.timeScale = 1f;
+        MusicManager.instance.PlayClip();
     }
     public void Pause()
     {
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
+        MusicManager.instance.PauseClip();
+        
     }
 
     public void GameOver()
     {
-
         gameOverMenu.SetActive(true);
         isScoring = false;
         if(PlayerPrefs.GetFloat("HighScore") < score)
         {
+            SoundManager.instance.NewHighScoreClip();
             goHighScoreText.text = "LastHighScore: ";
             SpawnConfetti();
             PlayerPrefs.SetFloat("HighScore", score);
             newHighScoreText.SetActive(true);
             newHighScoreTextText.text = goScoreText.text;
-        }      
+        } 
+        else
+        {
+            SoundManager.instance.GameOverClip();
+        }
 
         Time.timeScale = 0f;
         count = count + 1;
-        //MusicManager.instance.StopClip();
         MusicManager.instance.StopOtherOne();
-        MusicManager.instance.MainMenuClip();
+        MusicManager.instance.SnowyClip();
         if(PlayerPrefs.HasKey("ads") == false)
         {
             if (count == 3)
@@ -176,8 +180,7 @@ public class GameManager : MonoBehaviour
                 count = 0;
                 ads.PlayAd();                                                                                // Play ads after losing 3 times
             }
-        }
-            
+        }            
     }
 
     public void GetHundredCoins()
