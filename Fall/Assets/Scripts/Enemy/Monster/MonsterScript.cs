@@ -5,9 +5,9 @@ using UnityEngine;
 public class MonsterScript : MonoBehaviour
 {
     Animator anim;
-    public GameObject eatPoint;
     public GameObject Player;
     Rigidbody2D playerRB;
+    [SerializeField] float pushForce;
    
 
 
@@ -20,21 +20,21 @@ public class MonsterScript : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.tag == "Player")
-        {
-             anim.SetBool("isBiting", true);
-             playerRB.isKinematic = true;
-             other.gameObject.transform.position = new Vector3(eatPoint.transform.position.x, eatPoint.transform.position.y , eatPoint.transform.position.z -2) ;
-             other.gameObject.transform.SetParent(eatPoint.transform);
-        }
-    }
-
-    void Destroy()
+         if (other.gameObject.tag == "Player")
     {
-        Destroy(this.gameObject);
-        GameManager.instance.GameOver();
+        Debug.Log("Collided with monster");
         
+        // Calculate the direction from the monster to the player
+        Vector2 direction = other.transform.position - transform.position;
+
+        // Normalize the direction and multiply it by a push force
+        direction = direction.normalized;
+        Vector2 pushVector = direction * pushForce;
+
+        // Apply the push force to the player's rigidbody
+        playerRB.AddForce(pushVector, ForceMode2D.Impulse);
+    }
     }
 }

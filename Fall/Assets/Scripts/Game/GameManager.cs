@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject watchAdsButton;
     [SerializeField] GameObject newHighScoreText = null;
 
-    [SerializeField] AdsMAnager ads; 
+    //[SerializeField] AdsMAnager ads; 
     
     GameObject GameMusicManager; 
     GameObject SoundEffectsManager; 
@@ -178,14 +178,14 @@ public class GameManager : MonoBehaviour
             if (count == 3)
             {
                 count = 0;
-                ads.PlayAd();                                                                                // Play ads after losing 3 times
+              //  ads.PlayAd();                                                                                // Play ads after losing 3 times
             }
         }            
     }
 
     public void GetHundredCoins()
     {
-        ads.PlayRewardedAd(OnRewardedAdSuccess);
+     //   ads.PlayRewardedAd(OnRewardedAdSuccess);
         // Give player a reward for watching the ad
         Debug.Log("You gained 500 coins");
         GameDataManager.AddCoins(500);

@@ -8,6 +8,8 @@ public class Spikespawner : MonoBehaviour
     public GameObject fallWarning;
     GameObject warning;
 
+    Earthquake eq;
+
     float minX = 2.65f, maxX = 7.2f, minY = -5f;
     public float spawnTimer = 2f;
     float currentSpawnTimer;
@@ -16,6 +18,7 @@ public class Spikespawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        eq = FindObjectOfType<Earthquake>();
         currentSpawnTimer = spawnTimer;
     }
 
@@ -33,6 +36,7 @@ public class Spikespawner : MonoBehaviour
         {
             if (currentSpawnTimer > spawnTimer)
             {
+                
                 spawnCount++;
                 Vector3 position = transform.position;
                 position.x = Random.Range(minX, maxX);
@@ -41,8 +45,9 @@ public class Spikespawner : MonoBehaviour
 
                 GameObject newPlatform = null;
 
-                if (spawnCount == 4)
+                if (spawnCount == 7)
                 {
+                    eq.shake = true;
                     SoundManager.instance.IceBreakClip();
                     warning = Instantiate(fallWarning, position, Quaternion.identity);
                     warning.transform.localScale = new Vector3(0.05f, 0.05f, 0.1f);

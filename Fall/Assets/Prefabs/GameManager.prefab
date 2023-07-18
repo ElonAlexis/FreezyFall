@@ -40,7 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1743488859663140993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbc222f5640d9b943bd824c480c6325d, type: 3}
+  m_Script: {fileID: 11500000, guid: 34d40ad1f0f661c4190ca82dcfe399d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
@@ -48,10 +48,15 @@ MonoBehaviour:
   gameOverMenu: {fileID: 0}
   shop: {fileID: 0}
   watchAdsButton: {fileID: 0}
+  newHighScoreText: {fileID: 0}
   ads: {fileID: 0}
   scoreText: {fileID: 0}
   highScoreText: {fileID: 0}
   goScoreText: {fileID: 0}
+  goHighScoreScoreText: {fileID: 0}
   goHighScoreText: {fileID: 0}
+  newHighScoreTextText: {fileID: 0}
   confettiParticles: {fileID: 0}
   confettiParticles2: {fileID: 0}
+  confettiParticles3: {fileID: 0}
+  confettiParticles4: {fileID: 0}
