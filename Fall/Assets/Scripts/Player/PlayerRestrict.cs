@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerRestrict : MonoBehaviour
 {
-    float minX = 2.7f, maxX = 7.1f, minY = -5f, maxY = 5.2f;
+    float screenEdgeOffset = 0.3f;
 
     // Update is called once per frame
     void Update()
@@ -16,28 +16,27 @@ public class PlayerRestrict : MonoBehaviour
     {
         Vector2 position = transform.position;
 
-        if (position.x > maxX)
-        {
-            position.x = maxX;
-        }
-        else if (position.x < minX)
-        {
-            position.x = minX;
-        }
+        // Get the screen boundaries
+        float screenWidth = Screen.width;
+        float leftBoundary = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).x;
+        float rightBoundary = Camera.main.ScreenToWorldPoint(new Vector3(screenWidth, 0, 0)).x;
 
-        transform.position = position; 
+        float screenHeight = Screen.height;
+        float bottomBoundary = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).y;
+        float topBoundary = Camera.main.ScreenToWorldPoint(new Vector3(0, screenHeight, 0)).y;
 
-        if(position.y < minY)
+
+        // Clamp the player's position within the screen boundaries
+        position.x = Mathf.Clamp(position.x, leftBoundary + screenEdgeOffset, rightBoundary - screenEdgeOffset);
+
+        transform.position = position;
+
+        if (position.y < bottomBoundary || position.y > topBoundary)
         {
-            Destroy(this.gameObject);            
+            Destroy(this.gameObject);
             GameManager.instance.GameOver();
         }
-        else if(position.y > maxY)
-        {
-            Destroy(this.gameObject);            
-            GameManager.instance.GameOver();
-        }
-
     }
+
 
 }

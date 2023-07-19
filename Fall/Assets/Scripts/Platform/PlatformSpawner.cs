@@ -17,8 +17,7 @@ public class PlatformSpawner : MonoBehaviour
     public static float spawnTimer;
     float currentSpawnTimer;
     int spawnCount;
-    float minX = 3.7f, maxX = 6.2f;
-
+   
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +39,12 @@ public class PlatformSpawner : MonoBehaviour
         {
             spawnCount++;
             Vector3 position = transform.position;
-            position.x = Random.Range(minX, maxX);
+             // Get the screen boundaries
+            float screenWidth = Screen.width;
+            float leftBoundary = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).x;
+            float rightBoundary = Camera.main.ScreenToWorldPoint(new Vector3(screenWidth, 0, 0)).x;
+            float offset = 1f;
+            position.x = Random.Range(leftBoundary + offset, rightBoundary - offset);
 
             GameObject newPlatform = null;
 

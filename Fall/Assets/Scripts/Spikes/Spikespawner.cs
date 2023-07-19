@@ -39,7 +39,12 @@ public class Spikespawner : MonoBehaviour
                 
                 spawnCount++;
                 Vector3 position = transform.position;
-                position.x = Random.Range(minX, maxX);
+                // Get the screen boundaries
+                float screenWidth = Screen.width;
+                float leftBoundary = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).x;
+                float rightBoundary = Camera.main.ScreenToWorldPoint(new Vector3(screenWidth, 0, 0)).x;
+                float offset = 1f;
+                position.x = Random.Range(leftBoundary + offset, rightBoundary - offset);
                 position.y = 4f;
                 position.z = 0f;
 

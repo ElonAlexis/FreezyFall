@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MonsterScript : MonoBehaviour
 {
+
     Animator anim;
     public GameObject Player;
     Rigidbody2D playerRB;
@@ -20,21 +21,24 @@ public class MonsterScript : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+   void OnCollisionEnter2D(Collision2D other)
     {
-         if (other.gameObject.tag == "Player")
-    {
-        Debug.Log("Collided with monster");
-        
-        // Calculate the direction from the monster to the player
-        Vector2 direction = other.transform.position - transform.position;
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("Collided with monster");
 
-        // Normalize the direction and multiply it by a push force
-        direction = direction.normalized;
-        Vector2 pushVector = direction * pushForce;
+            Rigidbody2D playerRB = other.gameObject.GetComponent<Rigidbody2D>();
 
-        // Apply the push force to the player's rigidbody
-        playerRB.AddForce(pushVector, ForceMode2D.Impulse);
+            // Calculate the direction from the monster to the player
+            Vector2 direction = other.transform.position - transform.position;
+
+            // Normalize the direction
+            direction = direction.normalized;
+
+            // Apply the push force to the player's rigidbody
+            playerRB.velocity = Vector2.zero; // Reset the player's velocity to ensure consistent push back
+            playerRB.AddForce(direction * pushForce, ForceMode2D.Impulse);
+        }
     }
-    }
+
 }
