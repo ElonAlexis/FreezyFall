@@ -10,7 +10,7 @@ public class Spikespawner : MonoBehaviour
 
     Earthquake eq;
 
-    float minX = 2.65f, maxX = 7.2f, minY = -5f;
+    float minY = -5f;
     public float spawnTimer = 2f;
     float currentSpawnTimer;
     int spawnCount;

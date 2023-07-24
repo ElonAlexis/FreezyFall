@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverMenu;
     public GameObject shop;
 
+    [SerializeField] GameObject postProcessing;
+    BlizzardEffect blizzardEffectScript;
+
 
     [SerializeField] GameObject watchAdsButton;
     [SerializeField] GameObject newHighScoreText = null;
@@ -49,14 +52,18 @@ public class GameManager : MonoBehaviour
 
     //bool isLevel1 = false;
     bool adIsPlayed;
+    public bool gameOver;
 
     // Start is called before the first frame update
     void Awake()
     {
+
         if(instance == null)
         {
             instance = this;
         }
+
+        gameOver = false;
 
         //PlayerPrefs.DeleteAll();                                                                     // Delete all player prefs 
         //PlayerPrefs.DeleteKey("HighScore");                                                       // Delete current Highscore 
@@ -69,10 +76,12 @@ public class GameManager : MonoBehaviour
 
         GameMusicManager = GameObject.Find("GameMusicManager");
         SoundEffectsManager = GameObject.Find("SoundEffectManager");
+
+        blizzardEffectScript = postProcessing.GetComponentInParent<BlizzardEffect>(); 
     }
     private void Update()
     {
-
+        
         scoreText.text = "" + Mathf.Round(score);
         if (goScoreText != null)
         {
@@ -153,8 +162,10 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        gameOver = true;
         gameOverMenu.SetActive(true);
-        isScoring = false;
+        isScoring = false;        
+               
         if(PlayerPrefs.GetFloat("HighScore") < score)
         {
             SoundManager.instance.NewHighScoreClip();
