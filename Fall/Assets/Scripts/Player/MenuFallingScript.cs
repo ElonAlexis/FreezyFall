@@ -3,25 +3,44 @@
 public class MenuFallingScript : MonoBehaviour
 {
     //Min and max for player pos
-    [SerializeField] float _minY = -0.541f, _maxY = 3f;
-    [SerializeField] float _minX = -0.241f, _maxX = 0.247f;
+    [Header("Position Clamp Parameters")]
+    [Tooltip("Set min value for the Y position of the falling cube.")]
+    [SerializeField] float _minY = -0.541f;
+    [Tooltip("Set max value for the Y position of the falling cube.")]
+    [SerializeField] float _maxY = 3f;
+    [Tooltip("Set min value for the X position of the falling cube.")]
+    [SerializeField] float _minX = -0.241f;
+    [Tooltip("Set max value for the X position of the falling cube.")]
+    [SerializeField] float _maxX = 0.247f;
 
     //Min and max for player scale
-    [SerializeField] float _minScaleY = 0.00560757f, _maxScaleY = 0.0137812f;
-    [SerializeField] float _minScaleX = 0.00360757f, _maxScaleX = 0.0137812f;
-
-    //Aspect ratio variables
-    float _originalScaleX;
-    float _aspectRatio;
+    [Header("Scale Clamp Parameters")]
+    [Tooltip("Set min values for the Y scale of the falling cube.")]
+    [SerializeField] float _minScaleY = 0.00560757f;
+    [Tooltip("Set max values for the Y scale of the falling cube.")]
+    [SerializeField] float _maxScaleY = 0.0137812f;
+    [Tooltip("Set min values for the X scale of the falling cube.")]
+    [SerializeField] float _minScaleX = 0.00360757f;
+    [Tooltip("Set max values for the X scale of the falling cube.")]
+    [SerializeField] float _maxScaleX = 0.0137812f;
 
     //Move speed
-    [SerializeField] float _movesSpeed =0.5f;
+    [Header("Cube Fall Speed")]
+    [Tooltip("Set the speed at which the cube falls.")]
+    [SerializeField] float _moveSpeed =0.5f;
 
     //Rotation Variables
+    [Header("Cube Rotation Speed")]
+    [Tooltip("Set the speed at which the cube rotates.")]
     [SerializeField] float _rotationSpeed = 90f;
     float _currentRotationZ;
 
-    //Player Vectors
+    //Aspect ratio variables
+    const float _maxRotationAngle = 360f;
+    float _originalScaleX;
+    float _aspectRatio;
+
+    //Cache position
     Vector2 _position;
     
     private void Start()
@@ -37,7 +56,7 @@ public class MenuFallingScript : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-        _position.y -= _movesSpeed * Time.deltaTime; //Make cube fall
+        _position.y -= _moveSpeed * Time.deltaTime; //Make cube fall
         
         if (_position.y < _minY) //Reset params when cube reaches threshold
         {
@@ -48,7 +67,7 @@ public class MenuFallingScript : MonoBehaviour
         }
         
         _currentRotationZ += _rotationSpeed * Time.deltaTime; //Increment the rotation speed
-        _currentRotationZ %= 360f; //Clam rotation between 0 - 360
+        _currentRotationZ %= _maxRotationAngle; //Clam rotation between 0 - 360
 
         float newScaleY = _originalScaleX * _aspectRatio; // Calculate the corresponding scale.y to maintain aspect ratio
 
