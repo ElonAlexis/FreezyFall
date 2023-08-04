@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MenuFallingScript : MonoBehaviour
 {
@@ -18,6 +16,10 @@ public class MenuFallingScript : MonoBehaviour
 
     //Move speed
     [SerializeField] float _movesSpeed =0.5f;
+
+    //Rotation Variables
+    [SerializeField] float _rotationSpeed = 90f;
+    float _currentRotationZ;
 
     //Player Vectors
     Vector2 _position;
@@ -45,9 +47,14 @@ public class MenuFallingScript : MonoBehaviour
             _originalScaleX = Random.Range(_minScaleX, _maxScaleX); //Reset X scale
         }
         
+        _currentRotationZ += _rotationSpeed * Time.deltaTime; //Increment the rotation speed
+        _currentRotationZ %= 360f; //Clam rotation between 0 - 360
+
         float newScaleY = _originalScaleX * _aspectRatio; // Calculate the corresponding scale.y to maintain aspect ratio
 
-        transform.localScale = new Vector3(_originalScaleX, newScaleY, transform.localScale.z); // Apply the new scale to the GameObject
-        transform.position = _position; //Update the _position and scale of the object
+        //Apply position, scale, and rotation
+        transform.position = _position;
+        transform.localScale = new Vector3(_originalScaleX, newScaleY, transform.localScale.z);
+        transform.rotation = Quaternion.Euler(0f, 0f, _currentRotationZ);
     }
 }
