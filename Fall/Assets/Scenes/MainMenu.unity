@@ -2655,9 +2655,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minY: -0.541
   maxY: 3
-  movesSpeed: 0.5
   minX: -0.241
   maxX: 0.247
+  _minScaleY: 0.00560757
+  _maxScaleY: 0.0137812
+  _minScaleX: 0.00360757
+  _maxScaleX: 0.0137812
+  movesSpeed: 0.5
 --- !u!1 &335108718
 GameObject:
   m_ObjectHideFlags: 0

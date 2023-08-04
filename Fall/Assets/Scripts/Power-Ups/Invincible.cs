@@ -25,7 +25,7 @@ public class Invincible : MonoBehaviour
            gameObject.transform.parent = null;
            shield = Instantiate(iShield, new Vector3(other.gameObject.transform.position.x,other.gameObject.transform.position.y,other.gameObject.transform.position.z +0.03f), Quaternion.identity);
            shield.transform.SetParent(other.gameObject.transform);
-           //shield.transform.position = new Vector3(other.gameObject.transform.position.x,other.gameObject.transform.position.y,other.gameObject.transform.position.z +0.03f);
+           //shield.transform._position = new Vector3(other.gameObject.transform._position.x,other.gameObject.transform._position.y,other.gameObject.transform._position.z +0.03f);
            col = other.gameObject.transform.GetChild(0).transform.GetComponentInChildren<Collider2D>();
            col.enabled = false;
            gameObject.transform.position = new Vector3 (5,5,5);

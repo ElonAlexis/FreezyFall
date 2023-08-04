@@ -26,7 +26,7 @@ public class PlayerRestrict : MonoBehaviour
         float topBoundary = Camera.main.ScreenToWorldPoint(new Vector3(0, screenHeight, 0)).y;
 
 
-        // Clamp the player's position within the screen boundaries
+        // Clamp the player's _position within the screen boundaries
         position.x = Mathf.Clamp(position.x, leftBoundary + screenEdgeOffset, rightBoundary - screenEdgeOffset);
 
         transform.position = position;
