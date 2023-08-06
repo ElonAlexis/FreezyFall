@@ -1,12 +1,12 @@
-﻿// using System;
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
-// using UnityEngine.Advertisements;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Advertisements;
 
 
-// public class AdsMAnager : MonoBehaviour, IUnityAdsListener
-// {
+public class AdsMAnager : MonoBehaviour//, IUnityAdsListener
+{
 //     Action onRewardedAdSuccess; 
 //     // Start is called before the first frame update
 //     void Start()
@@ -68,4 +68,4 @@
 //             //Debug.Log("Reward Player please!"); 
 //         }
 //     }
-// }
+ }

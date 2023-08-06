@@ -21,7 +21,7 @@ public class MusicManager : MonoBehaviour
     GameObject OFF; 
     SpriteRenderer audioOffButton;
 
-    [SerializeField]
+    
     GameObject audioTxt;
 
     [SerializeField]
@@ -56,8 +56,8 @@ public class MusicManager : MonoBehaviour
     {
         ON = GameObject.FindGameObjectWithTag("ScreamON");
         OFF = GameObject.FindGameObjectWithTag("ScreamOFF");
-        audioOnButton = ON.GetComponent<SpriteRenderer>();
-        audioOffButton = OFF.GetComponent<SpriteRenderer>();
+        //audioOnButton = ON.GetComponent<SpriteRenderer>();                                    //////////////////////////////////////// Audio button sprite
+        //audioOffButton = OFF.GetComponent<SpriteRenderer>();
 
         AudioCheckingUpdate();
 
@@ -117,8 +117,8 @@ public class MusicManager : MonoBehaviour
     public void TurnOffAllAudio()
     {
         PlayerPrefs.SetInt("AudioState", 0);
-        audioOnButton.enabled = false;
-        audioOffButton.enabled = true;
+       // audioOnButton.enabled = false;                                                            ///////////////////////////////////////////// More Audio Button stuff
+       // audioOffButton.enabled = true;
         musicManagerAudio1.volume = 0;
         musicManagerAudio2.volume = 0;
         isPlaying = false;
@@ -126,41 +126,41 @@ public class MusicManager : MonoBehaviour
     public void TurnOnAllAudio()
     {
         PlayerPrefs.SetInt("AudioState", 1);
-        audioOnButton.enabled = true;
-        audioOffButton.enabled = false;
+       // audioOnButton.enabled = true;                                                             ///////////////////////////////////////////// More Audio Button stuff
+       // audioOffButton.enabled = false;
         musicManagerAudio1.volume = 1;
         musicManagerAudio2.volume = 1;
         isPlaying = true;       
     }
 
-    void AudioCheckingUpdate()
+    void AudioCheckingUpdate()                                                                                          
     {
-        prefs = PlayerPrefs.GetInt("AudioState");
-        if (prefs == 1)
-        {
-            TurnOnAllAudio();
-            if (hide)
-            {
-                audioOnButton.enabled = false;
-            }
-            else
-            {
-                audioOnButton.enabled = true;
-            }
+        prefs = PlayerPrefs.GetInt("AudioState");   
+        // if (prefs == 1)
+        // {
+        //     TurnOnAllAudio();                                                                                    ///////////////////////////////////////////// More Audio Button stuff
+        //     if (hide)
+        //     {
+        //         audioOnButton.enabled = false;
+        //     }
+        //     else
+        //     {
+        //         audioOnButton.enabled = true;
+        //     }
 
-        }
-        else if (prefs == 0)
-        {
-            TurnOffAllAudio();
-            if (hide)
-            {
-                audioOffButton.enabled = false;  
-            }
-            else
-            {
-                audioOffButton.enabled = true;
-            }
-        }
+        // }
+        // else if (prefs == 0)
+        // {
+        //     TurnOffAllAudio();
+        //     if (hide)
+        //     {
+        //         audioOffButton.enabled = false;  
+        //     }
+        //     else
+        //     {
+        //         audioOffButton.enabled = true;
+        //     }
+        // }
     }
    
 }

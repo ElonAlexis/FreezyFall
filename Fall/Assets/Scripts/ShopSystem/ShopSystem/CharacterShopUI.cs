@@ -12,7 +12,7 @@ public class CharacterShopUI : MonoBehaviour
 
 
     [Header("UI Elements")]
-    [SerializeField] Image selectedCharacterIcon; 
+    Image selectedCharacterIcon; 
 
     [SerializeField]  Transform shopMenu; 
     [SerializeField]  Transform shopItemsContainer; 
@@ -23,7 +23,7 @@ public class CharacterShopUI : MonoBehaviour
 
     [Space(20)]
     [Header("Main Menu")]
-    [SerializeField] Image mainMenuCharacterImage; 
+    // Image mainMenuCharacterImage; 
     
 
     [Space(20)]
@@ -36,7 +36,7 @@ public class CharacterShopUI : MonoBehaviour
    
     void Start()
     {
-      // GameDataManager.SetSelectedCharacter(characterDB.GetCharacter(index), index);
+       //GameDataManager.SetSelectedCharacter(characterDB.GetCharacter(index), index);
     
        
         GenerateShopItemsUI();
@@ -95,9 +95,9 @@ public class CharacterShopUI : MonoBehaviour
 		Character character = GameDataManager.GetSelectedCharacter ();
 		if (character.image != null) {
 			//Change Main menu's info (image & text)
-			mainMenuCharacterImage.sprite = character.image;
+			//mainMenuCharacterImage.sprite = character.image;                                                                                                                          // Main menu character image
 			//Set selected Character Image at the top of shop menu
-			selectedCharacterIcon.sprite = GameDataManager.GetSelectedCharacter ().image;
+			//selectedCharacterIcon.sprite = GameDataManager.GetSelectedCharacter ().image;
 		}
         else
         {
