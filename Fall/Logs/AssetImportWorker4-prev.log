@@ -15,7 +15,7 @@ C:/Users/elona/Documents/GitHub/FreezyFall/Fall
 -logFile
 Logs/AssetImportWorker4.log
 -srvPort
-65362
+53387
 Successfully changed project path to: C:/Users/elona/Documents/GitHub/FreezyFall/Fall
 C:/Users/elona/Documents/GitHub/FreezyFall/Fall
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,11 +49,11 @@ C:/Users/elona/Documents/GitHub/FreezyFall/Fall
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [3348] Host "[IP] 192.168.0.14 [Port] 0 [Flags] 2 [Guid] 4099584635 [EditorId] 4099584635 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CMJPUKR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [1892] Host "[IP] 192.168.0.14 [Port] 0 [Flags] 2 [Guid] 4202908978 [EditorId] 4202908978 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CMJPUKR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [3348] Host "[IP] 192.168.0.14 [Port] 0 [Flags] 2 [Guid] 4099584635 [EditorId] 4099584635 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CMJPUKR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [1892] Host "[IP] 192.168.0.14 [Port] 0 [Flags] 2 [Guid] 4202908978 [EditorId] 4202908978 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-CMJPUKR) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 12.00 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 9.65 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.4f1 (35713cd46cd7)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -69,51 +69,51 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56452
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56088
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.009121 seconds.
-- Loaded All Assemblies, in  0.269 seconds
+Registered in 0.005983 seconds.
+- Loaded All Assemblies, in  0.240 seconds
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 208 ms
+Android Extension - Scanning For ADB Devices 207 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.441 seconds
-Domain Reload Profiling: 709ms
-	BeginReloadAssembly (61ms)
+- Finished resetting the current domain, in  0.432 seconds
+Domain Reload Profiling: 671ms
+	BeginReloadAssembly (60ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (0ms)
-	RebuildCommonClasses (30ms)
-	RebuildNativeTypeToScriptingClass (9ms)
-	initialDomainReloadingComplete (52ms)
-	LoadAllAssembliesAndSetupDomain (115ms)
-		LoadAssemblies (60ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (45ms)
+	LoadAllAssembliesAndSetupDomain (99ms)
+		LoadAssemblies (59ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (111ms)
-			TypeCache.Refresh (110ms)
-				TypeCache.ScanAssembly (100ms)
+		AnalyzeDomain (95ms)
+			TypeCache.Refresh (94ms)
+				TypeCache.ScanAssembly (87ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (441ms)
+	FinalizeReload (432ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (399ms)
+		SetupLoadedEditorAssemblies (392ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (298ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (296ms)
+			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (67ms)
-			ProcessInitializeOnLoadMethodAttributes (29ms)
+			BeforeProcessingInitializeOnLoad (1ms)
+			ProcessInitializeOnLoadAttributes (63ms)
+			ProcessInitializeOnLoadMethodAttributes (30ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -122,53 +122,53 @@ Domain Reload Profiling: 709ms
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.543 seconds
-Refreshing native plugins compatible for Editor in 6.04 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.539 seconds
+Refreshing native plugins compatible for Editor in 5.83 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.512 seconds
-Domain Reload Profiling: 1052ms
-	BeginReloadAssembly (97ms)
+- Finished resetting the current domain, in  0.518 seconds
+Domain Reload Profiling: 1054ms
+	BeginReloadAssembly (94ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (4ms)
+		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (22ms)
-	RebuildCommonClasses (23ms)
+		CreateAndSetChildDomain (18ms)
+	RebuildCommonClasses (22ms)
 	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (32ms)
-	LoadAllAssembliesAndSetupDomain (381ms)
-		LoadAssemblies (199ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (379ms)
+		LoadAssemblies (207ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (223ms)
-			TypeCache.Refresh (197ms)
-				TypeCache.ScanAssembly (183ms)
-			ScanForSourceGeneratedMonoScriptInfo (20ms)
+		AnalyzeDomain (213ms)
+			TypeCache.Refresh (186ms)
+				TypeCache.ScanAssembly (174ms)
+			ScanForSourceGeneratedMonoScriptInfo (21ms)
 			ResolveRequiredComponents (6ms)
-	FinalizeReload (512ms)
+	FinalizeReload (518ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (386ms)
+		SetupLoadedEditorAssemblies (383ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (25ms)
-			SetLoadedEditorAssemblies (3ms)
+			InitializePlatformSupportModulesInManaged (22ms)
+			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (57ms)
+			BeforeProcessingInitializeOnLoad (56ms)
 			ProcessInitializeOnLoadAttributes (173ms)
-			ProcessInitializeOnLoadMethodAttributes (124ms)
-			AfterProcessingInitializeOnLoad (4ms)
+			ProcessInitializeOnLoadMethodAttributes (125ms)
+			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (4ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 8.12 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 7.10 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5091 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 112 unused Assets / (1.6 MB). Loaded Objects now: 5527.
+Unloading 5092 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 112 unused Assets / (1.6 MB). Loaded Objects now: 5528.
 Memory consumption went from 222.7 MB to 221.1 MB.
-Total: 7.907400 ms (FindLiveObjects: 0.362600 ms CreateObjectMapping: 0.285700 ms MarkObjects: 6.770500 ms  DeleteObjects: 0.487600 ms)
+Total: 7.488900 ms (FindLiveObjects: 0.383400 ms CreateObjectMapping: 0.261100 ms MarkObjects: 6.381800 ms  DeleteObjects: 0.461400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -184,254 +184,70 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 232429.663277 seconds.
-  path: Assets/Resources/FF New Assets/BackgroundAssets/PLAY.png
-  artifactKey: Guid(ad2a43f95ccbbc74eacc16632adb2fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/FF New Assets/BackgroundAssets/PLAY.png using Guid(ad2a43f95ccbbc74eacc16632adb2fff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47080092adde8bb50cb9b31165979b52') in 0.022773 seconds
+  Time since last request: 235361.328539 seconds.
+  path: Assets/Resources/FF New Assets/BackgroundAssets/TitleLogo.png
+  artifactKey: Guid(921b3dc789d8b09449a27224e8c611b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/FF New Assets/BackgroundAssets/TitleLogo.png using Guid(921b3dc789d8b09449a27224e8c611b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30e2373153cd914024ef2982499a9b7e') in 0.032050 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
 ========================================================================
 Received Import Request.
-  Time since last request: 19.678813 seconds.
-  path: Assets/Resources/FF New Assets/BackgroundAssets/IceSpikePlatform.png
-  artifactKey: Guid(9a7836029066ea44ca6cada17ad9c3ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/FF New Assets/BackgroundAssets/IceSpikePlatform.png using Guid(9a7836029066ea44ca6cada17ad9c3ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7baef9ade0d4dd256f40d85a6fac4de1') in 0.006705 seconds
+  Time since last request: 0.105461 seconds.
+  path: Assets/Resources/FF New Assets/BackgroundAssets/WindParticle6.png
+  artifactKey: Guid(a90da83a1e7f3df4bafd06ebe820a5ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/FF New Assets/BackgroundAssets/WindParticle6.png using Guid(a90da83a1e7f3df4bafd06ebe820a5ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c57d033483379e97455fe7cb4dec8d3a') in 0.003782 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 1.289813 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '117309f16271065c73bc8a794c420e54') in 0.003371 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 22.919205 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6d3fd05bd925b4b4da82353b87fbccd') in 0.002771 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 19.343129 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f6715a069f0327fa0af71c9f2837570') in 0.006416 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 2.816114 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6e2c6777b3f498e5937def3bdf61815') in 0.006974 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 4.020556 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a368a6dd9ee2600f16badeeacddaf89') in 0.006578 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 4.636260 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5b3118ff7844124b39a91457694355a') in 0.006948 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 10.851314 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b135c8c918300a661cc3061a2b178df') in 0.005698 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 10.503119 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '365e890ea9df912cab3b83279c8cd1de') in 0.006509 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 11.122878 seconds.
-  path: Assets/Resources/Cat lol.png
-  artifactKey: Guid(e49377e7e7a59324e9553529da0d36dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Cat lol.png using Guid(e49377e7e7a59324e9553529da0d36dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c374717bde76811b6a6703dc64f0bec6') in 0.001434 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.001555 seconds.
-  path: Assets/Resources/close.png
-  artifactKey: Guid(8d0f49a9404cd7b4687b07bf2f796ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/close.png using Guid(8d0f49a9404cd7b4687b07bf2f796ce9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '712e8c8400dd7724d7a2977da4b93655') in 0.001214 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Resources/FF New Assets/BackgroundAssets/Coin.png
-  artifactKey: Guid(8dd789a922fd92c49a54048ca6339b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/FF New Assets/BackgroundAssets/Coin.png using Guid(8dd789a922fd92c49a54048ca6339b4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c753ae7577cbce198937fa6977b1542') in 0.001286 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Resources/FF New Assets/BackgroundAssets/CoinOnSnow.png
-  artifactKey: Guid(86c688dbc90a52c4f8b2d8fe41366b80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/FF New Assets/BackgroundAssets/CoinOnSnow.png using Guid(86c688dbc90a52c4f8b2d8fe41366b80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b83c5a0c9fc2f2221090e2019bfe5d8') in 0.004251 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 3.925183 seconds.
-  path: Assets/Resources/FF New Assets/BackgroundAssets/AdAndCoinBackBlock.png
-  artifactKey: Guid(6c0ee013fb4244b48852e6f7f410f43d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/FF New Assets/BackgroundAssets/AdAndCoinBackBlock.png using Guid(6c0ee013fb4244b48852e6f7f410f43d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dd0e9c3a3b05b6f9b9180f3d546b7d3') in 0.023372 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 5.253934 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '794c35bca400647799ca13d90b3c847b') in 0.006061 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 6.638696 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8700726d0c722868b4c7bbc21f2c5ed2') in 0.006271 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 13.518942 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee1afd0cc754d13584f102475515ccca') in 0.006054 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 12.076216 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fc516f7bab819350979767571e34bbf') in 0.007412 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 5.258814 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b51878451844bf36bfb1bfff74fc5004') in 0.006148 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 11.287565 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7f465e8696580a0d241db88d05a61e8') in 0.007282 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 12.287923 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46198e4a5345837f59855e8ea914870b') in 0.006498 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 7.879442 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95e1b49034da31fe9ca6d12da8b65909') in 0.007325 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 4.818947 seconds.
-  path: Assets/Prefabs/Platforms/Normal/Coin Platform.prefab
-  artifactKey: Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Platforms/Normal/Coin Platform.prefab using Guid(8da67c45af2aacf4691686cce4eb4c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bb4b3f03ce60efaa158f009456bf9f5') in 0.005823 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 16
-========================================================================
-Received Import Request.
-  Time since last request: 529.104525 seconds.
-  path: Assets/UniversalRenderPipelineAsset.asset
-  artifactKey: Guid(0d0d83af461fbd04480c3414b5c3bab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/UniversalRenderPipelineAsset.asset using Guid(0d0d83af461fbd04480c3414b5c3bab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '464394019ca1c72218edce8bdbc1b5c0') in 0.000726 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.518 seconds
-Refreshing native plugins compatible for Editor in 5.45 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.604 seconds
+Refreshing native plugins compatible for Editor in 6.11 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.831 seconds
-Domain Reload Profiling: 1346ms
-	BeginReloadAssembly (132ms)
+- Finished resetting the current domain, in  0.890 seconds
+Domain Reload Profiling: 1491ms
+	BeginReloadAssembly (129ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (48ms)
-	RebuildCommonClasses (23ms)
-	RebuildNativeTypeToScriptingClass (8ms)
-	initialDomainReloadingComplete (21ms)
-	LoadAllAssembliesAndSetupDomain (330ms)
-		LoadAssemblies (186ms)
+		CreateAndSetChildDomain (42ms)
+	RebuildCommonClasses (28ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (22ms)
+	LoadAllAssembliesAndSetupDomain (413ms)
+		LoadAssemblies (230ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (185ms)
-			TypeCache.Refresh (179ms)
-				TypeCache.ScanAssembly (166ms)
+		AnalyzeDomain (225ms)
+			TypeCache.Refresh (218ms)
+				TypeCache.ScanAssembly (204ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (831ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (890ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (392ms)
+		SetupLoadedEditorAssemblies (420ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (22ms)
+			InitializePlatformSupportModulesInManaged (23ms)
 			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (61ms)
-			ProcessInitializeOnLoadAttributes (175ms)
-			ProcessInitializeOnLoadMethodAttributes (127ms)
+			BeforeProcessingInitializeOnLoad (63ms)
+			ProcessInitializeOnLoadAttributes (181ms)
+			ProcessInitializeOnLoadMethodAttributes (146ms)
 			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-Refreshing native plugins compatible for Editor in 5.70 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 6.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4899 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 78 unused Assets / (1.6 MB). Loaded Objects now: 5534.
+Unloading 4900 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 78 unused Assets / (1.6 MB). Loaded Objects now: 5535.
 Memory consumption went from 185.4 MB to 183.8 MB.
-Total: 6.942700 ms (FindLiveObjects: 0.419300 ms CreateObjectMapping: 0.351100 ms MarkObjects: 5.826300 ms  DeleteObjects: 0.345000 ms)
+Total: 7.068000 ms (FindLiveObjects: 0.426800 ms CreateObjectMapping: 0.347500 ms MarkObjects: 5.933200 ms  DeleteObjects: 0.359900 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
