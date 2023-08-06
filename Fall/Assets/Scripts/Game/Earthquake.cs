@@ -12,7 +12,7 @@ public class Earthquake : MonoBehaviour
 
     void Start()
     {
-        // Store the initial position of the camera
+        // Store the initial _position of the camera
         initialPosition = transform.localPosition;
     }
 
@@ -31,7 +31,7 @@ public class Earthquake : MonoBehaviour
             float y = Random.value * 2f - 1f;
             Vector3 shakeOffset = new Vector3(x, y, 0f) * shakeMagnitude;
 
-            // Add the shake offset to the initial position to get the new position
+            // Add the shake offset to the initial _position to get the new _position
             transform.localPosition = initialPosition + shakeOffset;
 
             // Decrease the shake timer over time
@@ -42,7 +42,7 @@ public class Earthquake : MonoBehaviour
         }
         else
         {
-            // Reset the camera position to the initial position
+            // Reset the camera _position to the initial _position
             transform.localPosition = initialPosition;
         }
     }

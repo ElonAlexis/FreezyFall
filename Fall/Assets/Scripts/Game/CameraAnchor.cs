@@ -1,5 +1,5 @@
 ﻿/***
- * This script will anchor a GameObject to a relative screen position.
+ * This script will anchor a GameObject to a relative screen _position.
  * This script is intended to be used with ViewportHandler.cs by Marcel Căşvan, available here: http://gamedev.stackexchange.com/a/89973/50623
  * It is also copied in this gist below.
  * 
