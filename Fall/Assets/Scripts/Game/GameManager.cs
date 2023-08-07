@@ -20,10 +20,13 @@ public class GameManager : MonoBehaviour
 
 
     [SerializeField] GameObject watchAdsButton;
+    [SerializeField] GameObject playerScoreText = null;
     [SerializeField] GameObject newHighScoreText = null;
+    [SerializeField] GameObject _highScoreTextSpriteHolder = null;
+    [SerializeField] Sprite[] _gameOverHighScoreTextImage;
 
     //[SerializeField] AdsMAnager ads; 
-    
+
     GameObject GameMusicManager; 
     GameObject SoundEffectsManager; 
     
@@ -39,8 +42,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI goHighScoreScoreText = null;
     [SerializeField] TextMeshProUGUI goHighScoreText = null;
     [SerializeField] TextMeshProUGUI newHighScoreTextText = null;
-
-
 
 
     [SerializeField] ParticleSystem confettiParticles = null;
@@ -76,6 +77,7 @@ public class GameManager : MonoBehaviour
 
         GameMusicManager = GameObject.Find("GameMusicManager");
         SoundEffectsManager = GameObject.Find("SoundEffectManager");
+        _highScoreTextSpriteHolder.GetComponent<Image>().sprite = _gameOverHighScoreTextImage[0]; //Set Highscore Image Text at game over
 
         blizzardEffectScript = postProcessing.GetComponentInParent<BlizzardEffect>(); 
     }
@@ -169,10 +171,12 @@ public class GameManager : MonoBehaviour
         if(PlayerPrefs.GetFloat("HighScore") < score)
         {
             SoundManager.instance.NewHighScoreClip();
-            goHighScoreText.text = "LastHighScore: ";
+            //goHighScoreText.text = "LastHighScore: ";
+            _highScoreTextSpriteHolder.GetComponent<Image>().sprite = _gameOverHighScoreTextImage[1];
             SpawnConfetti();
             PlayerPrefs.SetFloat("HighScore", score);
             newHighScoreText.SetActive(true);
+            playerScoreText.SetActive(false);
             newHighScoreTextText.text = goScoreText.text;
         } 
         else

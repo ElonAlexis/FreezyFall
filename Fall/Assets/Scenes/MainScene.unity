@@ -33695,7 +33695,7 @@ GameObject:
   - component: {fileID: 1769006194}
   - component: {fileID: 1769006193}
   m_Layer: 5
-  m_Name: Player Score Text
+  m_Name: New High Score Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33743,15 +33743,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 19fb8ccd192d4b04b8a7feb9c576c9bd, type: 2}
+  m_sharedMaterial: {fileID: 4123546409620273902, guid: 19fb8ccd192d4b04b8a7feb9c576c9bd,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4285095727
+  m_fontColor: {r: 0.18431373, g: 0.37254903, b: 0.41176474, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -34735,7 +34736,7 @@ PrefabInstance:
         type: 3}
       propertyPath: goScoreText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 204858810}
     - target: {fileID: 1743488858520065331, guid: 50a9956468da8a44397b46f9a42912b6,
         type: 3}
       propertyPath: gameOverMenu
@@ -34765,12 +34766,17 @@ PrefabInstance:
         type: 3}
       propertyPath: goHighScoreText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 556447384}
     - target: {fileID: 1743488858520065331, guid: 50a9956468da8a44397b46f9a42912b6,
         type: 3}
       propertyPath: placementObject
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1743488858520065331, guid: 50a9956468da8a44397b46f9a42912b6,
+        type: 3}
+      propertyPath: playerScoreText
+      value: 
+      objectReference: {fileID: 417496632}
     - target: {fileID: 1743488858520065331, guid: 50a9956468da8a44397b46f9a42912b6,
         type: 3}
       propertyPath: newHighScoreText
@@ -34805,7 +34811,29 @@ PrefabInstance:
         type: 3}
       propertyPath: newHighScoreTextText
       value: 
+      objectReference: {fileID: 1769006193}
+    - target: {fileID: 1743488858520065331, guid: 50a9956468da8a44397b46f9a42912b6,
+        type: 3}
+      propertyPath: _highScoreTextSpriteHolder
+      value: 
+      objectReference: {fileID: 905190588}
+    - target: {fileID: 1743488858520065331, guid: 50a9956468da8a44397b46f9a42912b6,
+        type: 3}
+      propertyPath: _gameOverHighScoreTextImage.Array.size
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1743488858520065331, guid: 50a9956468da8a44397b46f9a42912b6,
+        type: 3}
+      propertyPath: _gameOverHighScoreTextImage.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: dece01ea20dfe074f97e0db5e6b696ac,
+        type: 3}
+    - target: {fileID: 1743488858520065331, guid: 50a9956468da8a44397b46f9a42912b6,
+        type: 3}
+      propertyPath: _gameOverHighScoreTextImage.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9b72dc3a8e1984b46b766e992b5a8cf9,
+        type: 3}
     - target: {fileID: 1743488859663140993, guid: 50a9956468da8a44397b46f9a42912b6,
         type: 3}
       propertyPath: m_Name
