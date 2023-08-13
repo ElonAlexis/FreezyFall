@@ -167,7 +167,7 @@ public class GameManager : MonoBehaviour
         gameOver = true;
         gameOverMenu.SetActive(true);
         isScoring = false;        
-               
+        blizzardEffectScript.dof.focalLength.value = 0; // turn off blur on GO
         if(PlayerPrefs.GetFloat("HighScore") < score)
         {
             SoundManager.instance.NewHighScoreClip();

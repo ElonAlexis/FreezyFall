@@ -9,7 +9,7 @@ public class BlizzardEffect : MonoBehaviour
 {
     
     public Volume volume; 
-    DepthOfField dof;
+    public DepthOfField dof;
 
     bool blizzard;
     [SerializeField]
@@ -80,7 +80,7 @@ bool blizzardSnowActivated = false;
     {
         if (blizzard)
         {           
-            // dof.focalLength.value = 300;      // Blur effect on 
+            dof.focalLength.value = dof.focalLength.value += 20f * Time.deltaTime;      // Blur effect on 
             if(blizzardColor.a != 1)
             {
                 blizzardColor.a = blizzardColor.a += 0.4f * Time.deltaTime; // Set alpha to make it fully opaque
@@ -89,6 +89,10 @@ bool blizzardSnowActivated = false;
                 {
                     blizzardColor.a = 1;
                 }
+                if(dof.focalLength.value >= 300)
+                {
+                   dof.focalLength.value = 300;
+                }
             }         
         }
         else
@@ -96,13 +100,17 @@ bool blizzardSnowActivated = false;
             normalSnow.SetActive(true);
             blizzardL.SetActive(false);
             blizzardR.SetActive(false);
-            //  dof.focalLength.value = 1;        // Blur effect off 
+            dof.focalLength.value = dof.focalLength.value -= 50f * Time.deltaTime;        // Blur effect off 
             blizzardColor.a -= 0.4f * Time.deltaTime; // Set alpha to make it fully transparent
             blizzardSpriteRenderer.color = blizzardColor; // Apply the color change to the SpriteRenderer
             blizzardSnowActivated = false; // Reset the flag when not in blizzard mode
             if(blizzardColor.a <= 0)
             {
                 blizzardColor.a = 0;
+            }
+            if(dof.focalLength.value <= 0)
+            {
+                dof.focalLength.value = 0;
             }
         }
        

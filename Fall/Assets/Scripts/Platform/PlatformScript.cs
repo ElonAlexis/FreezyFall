@@ -109,6 +109,6 @@ public class PlatformScript : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f); 
         Destroy(warningSign);
-        anim.SetBool("isBroken", true);
+        anim.SetTrigger("CollisionWithPlayer");
     }
 }
