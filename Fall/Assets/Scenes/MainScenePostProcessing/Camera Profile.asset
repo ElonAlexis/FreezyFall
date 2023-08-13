@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 1
     m_Value: 2
@@ -126,7 +126,7 @@ MonoBehaviour:
     m_Value: 9.6
   focalLength:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 31
   bladeCount:
     m_OverrideState: 0
     m_Value: 3
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29fa0085f50d5e54f8144f766051a691, type: 3}
   m_Name: FilmGrain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   type:
     m_OverrideState: 0
     m_Value: 9
@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   skipIterations:
     m_OverrideState: 0
     m_Value: 1
@@ -522,7 +522,7 @@ MonoBehaviour:
     m_Value: 0.83
   intensity:
     m_OverrideState: 1
-    m_Value: 0.83
+    m_Value: 0.81
   scatter:
     m_OverrideState: 0
     m_Value: 0.447
@@ -531,7 +531,7 @@ MonoBehaviour:
     m_Value: 65472
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0.27843142, g: 0.35266414, b: 1, a: 1}
+    m_Value: {r: 0.27843142, g: 0.28101107, b: 1, a: 1}
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 0

@@ -4,14 +4,27 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
+
 public class BlizzardEffect : MonoBehaviour
 {
     
     public Volume volume; 
     DepthOfField dof;
 
-    public bool blizzard;
+    bool blizzard;
+    [SerializeField]
+    GameObject blizzardEffect;
+    SpriteRenderer blizzardSpriteRenderer; 
+    Color blizzardColor;
+    [SerializeField]
+    GameObject normalSnow; 
+    [SerializeField]
+    GameObject blizzardL; 
+    [SerializeField]
+    GameObject blizzardR; 
+    int rightOrLeft;
 
+bool blizzardSnowActivated = false;
 
     float spawnTimer = 10f;
     public float currentSpawnTimer;
@@ -19,7 +32,8 @@ public class BlizzardEffect : MonoBehaviour
 
     void Awake()
     {
-       
+        blizzardSpriteRenderer = blizzardEffect.GetComponent<SpriteRenderer>(); 
+        blizzardColor = blizzardSpriteRenderer.color;       
     }
 
     // Start is called before the first frame update
@@ -27,48 +41,71 @@ public class BlizzardEffect : MonoBehaviour
     {
         volume.profile.TryGet(out dof);
         currentSpawnTimer = spawnTimer;
+
     }
 
     void Update()
+{
+    Blizzard();
+
+    if (GameManager.instance.gameOver)
     {
-        Blizzard(); 
-
-        if(GameManager.instance.gameOver)
-        {
-            currentSpawnTimer = spawnTimer;
-        }
-
-        if(GameManager.instance.score > 1000)
-        {
-            currentSpawnTimer -= 1 * Time.deltaTime;
-
-
-            if(currentSpawnTimer <= 0)
-            {        
-                    blizzard = true; 
-                    StartCoroutine(WaitThreeSeconds());            
-            }  
-            else
-            {
-                    blizzard = false; 
-            }
-       
-        }
-
-       
+        currentSpawnTimer = spawnTimer;
     }
+
+    if (GameManager.instance.score > 10)
+    {
+        currentSpawnTimer -= 1 * Time.deltaTime;
+
+        if (currentSpawnTimer <= 0)
+        {
+            if (!blizzardSnowActivated)
+            {
+                blizzard = true;
+                ActivateBlizzardSnow(); // Call the function to activate blizzard snow
+                blizzardSnowActivated = true; // Set the flag to true
+                StartCoroutine(WaitThreeSeconds());
+                
+            }
+        }
+        else
+        {
+            blizzard = false;
+            
+        }
+    }
+}
 
     void Blizzard()
     {
-        if(blizzard)
-        {
-            Debug.Log("Blizzard");
-            dof.focalLength.value = 300;
+        if (blizzard)
+        {           
+            // dof.focalLength.value = 300;      // Blur effect on 
+            if(blizzardColor.a != 1)
+            {
+                blizzardColor.a = blizzardColor.a += 0.4f * Time.deltaTime; // Set alpha to make it fully opaque
+                blizzardSpriteRenderer.color = blizzardColor; // Apply the color change to the SpriteRenderer
+                if(blizzardColor.a >= 1)
+                {
+                    blizzardColor.a = 1;
+                }
+            }         
         }
-        else 
+        else
         {
-            dof.focalLength.value = 1;
+            normalSnow.SetActive(true);
+            blizzardL.SetActive(false);
+            blizzardR.SetActive(false);
+            //  dof.focalLength.value = 1;        // Blur effect off 
+            blizzardColor.a -= 0.4f * Time.deltaTime; // Set alpha to make it fully transparent
+            blizzardSpriteRenderer.color = blizzardColor; // Apply the color change to the SpriteRenderer
+            blizzardSnowActivated = false; // Reset the flag when not in blizzard mode
+            if(blizzardColor.a <= 0)
+            {
+                blizzardColor.a = 0;
+            }
         }
+       
     }
     
 
@@ -76,5 +113,22 @@ public class BlizzardEffect : MonoBehaviour
     {
         yield return new WaitForSeconds(7);
         currentSpawnTimer = spawnTimer; 
+    }
+
+    void ActivateBlizzardSnow()
+    {
+        rightOrLeft = Random.Range(0,2);
+        Debug.Log("Right / Left Value" + rightOrLeft);
+
+        if(rightOrLeft == 0)
+        {
+            normalSnow.SetActive(false);
+            blizzardL.SetActive(true);
+        }
+        else
+        {
+            normalSnow.SetActive(false);
+            blizzardR.SetActive(true);
+        }
     }
 }
