@@ -12,6 +12,8 @@ public class PlatformScript : MonoBehaviour
     Animator anim;
     BGScroll bGScroll; 
 
+    Collider2D platformCollider; 
+
     bool isGrounded; 
 
     // Start is called before the first frame update
@@ -21,6 +23,7 @@ public class PlatformScript : MonoBehaviour
         if(isBreakable)
         {
            anim = GetComponent<Animator>();
+           platformCollider = GetComponent<Collider2D>();
         }
     }
 
@@ -84,14 +87,19 @@ public class PlatformScript : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    void TurnOffCollider()
+    {
+        platformCollider.enabled = false;
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.tag == "Player")
         {            
             if(isBreakable)
             {
-                // SoundManager
-                warningSign = Instantiate(warning, new Vector3(gameObject.transform.position.x,gameObject.transform.position.y + 1,gameObject.transform.position.z), Quaternion.identity);
+                // Warning Signal spawn
+                warningSign = Instantiate(warning, new Vector3(gameObject.transform.position.x,gameObject.transform.position.y + 3,gameObject.transform.position.z), Quaternion.identity);
                 warningSign.transform.SetParent(gameObject.transform); 
                 StartCoroutine(WarningWaitTime());             
 

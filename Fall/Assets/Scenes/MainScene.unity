@@ -29611,6 +29611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: {fileID: 1970898325}
+  dof: {fileID: 0}
   blizzardEffect: {fileID: 1035415228}
   normalSnow: {fileID: 1876024371}
   blizzardL: {fileID: 178904506}
