@@ -43,7 +43,7 @@ public class PlatformSpawner : MonoBehaviour
             float screenWidth = Screen.width;
             float leftBoundary = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0)).x;
             float rightBoundary = Camera.main.ScreenToWorldPoint(new Vector3(screenWidth, 0, 0)).x;
-            float offset = 1f;
+            float offset = 1.5f;
             position.x = Random.Range(leftBoundary + offset, rightBoundary - offset);
 
             GameObject newPlatform = null;
