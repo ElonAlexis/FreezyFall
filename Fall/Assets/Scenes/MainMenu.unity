@@ -2271,7 +2271,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288336454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3015.2249}
+  m_LocalPosition: {x: 0, y: 0, z: 3707.1438}
   m_LocalScale: {x: 0.3, y: 0.21428573, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2281,7 +2281,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -190.51654}
+  m_AnchoredPosition: {x: 50, y: -285.4083}
   m_SizeDelta: {x: 1291.2891, y: 522.9811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &288336456
@@ -7511,7 +7511,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028291165}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3015.2249}
+  m_LocalPosition: {x: 0, y: 0, z: 3707.1438}
   m_LocalScale: {x: 0.4, y: 0.25, z: 0.35000002}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -7521,7 +7521,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: 326.37915}
+  m_AnchoredPosition: {x: 50, y: 350.10208}
   m_SizeDelta: {x: 1291.2891, y: 522.9811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1028291167
@@ -7897,7 +7897,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111532261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3015.2249}
+  m_LocalPosition: {x: 0, y: 0, z: 3707.1438}
   m_LocalScale: {x: 0.3, y: 0.21428573, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -7907,7 +7907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: 67.93129}
+  m_AnchoredPosition: {x: 50, y: 32.346878}
   m_SizeDelta: {x: 1291.2891, y: 522.9811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1111532263
@@ -10172,7 +10172,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431187806}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3015.2249}
+  m_LocalPosition: {x: 0, y: 0, z: 3707.1438}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.3333333}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -10182,7 +10182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -362.2178, y: -452.3435}
+  m_AnchoredPosition: {x: -206.41287, y: -630.26556}
   m_SizeDelta: {x: 1437.33, y: 567.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1431187808
@@ -14696,7 +14696,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092019116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 3015.2249}
+  m_LocalPosition: {x: 0, y: 0, z: 3707.1438}
   m_LocalScale: {x: 1.19, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14706,7 +14706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 344.98795, y: -452.3435}
+  m_AnchoredPosition: {x: 185.2292, y: -630.26556}
   m_SizeDelta: {x: 352.63, y: 225.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2092019118
@@ -16431,14 +16431,24 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 87cd5c76a55b88f4a93eb696db530ce5, type: 3}
     - target: {fileID: 6744876179328656426, guid: d20968a0b1c521a409a65fa46fac48b5,
         type: 3}
+      propertyPath: sfxVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744876179328656426, guid: d20968a0b1c521a409a65fa46fac48b5,
+        type: 3}
       propertyPath: snowyMusic
       value: 
       objectReference: {fileID: 8300000, guid: 918575d1bf982084999614a99e87697a, type: 3}
     - target: {fileID: 6744876179328656426, guid: d20968a0b1c521a409a65fa46fac48b5,
         type: 3}
+      propertyPath: musicVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744876179328656426, guid: d20968a0b1c521a409a65fa46fac48b5,
+        type: 3}
       propertyPath: creditsMusic
       value: 
-      objectReference: {fileID: 8300000, guid: ad78c9141f20c9b4593aca377b4ab283, type: 3}
+      objectReference: {fileID: 8300000, guid: 5532ad8cd14b2c144aff5fc5ce486957, type: 3}
     - target: {fileID: 6744876179328656426, guid: d20968a0b1c521a409a65fa46fac48b5,
         type: 3}
       propertyPath: audioOnButton
@@ -16451,12 +16461,32 @@ PrefabInstance:
       objectReference: {fileID: 129516709}
     - target: {fileID: 6744876179328656426, guid: d20968a0b1c521a409a65fa46fac48b5,
         type: 3}
+      propertyPath: _sfxAudioSource
+      value: 
+      objectReference: {fileID: 598042767}
+    - target: {fileID: 6744876179328656426, guid: d20968a0b1c521a409a65fa46fac48b5,
+        type: 3}
+      propertyPath: _musicAudioSource
+      value: 
+      objectReference: {fileID: 598042766}
+    - target: {fileID: 6744876179328656426, guid: d20968a0b1c521a409a65fa46fac48b5,
+        type: 3}
       propertyPath: musicManagerAudio1
       value: 
       objectReference: {fileID: 598042767}
     - target: {fileID: 6744876179328656426, guid: d20968a0b1c521a409a65fa46fac48b5,
         type: 3}
       propertyPath: musicManagerAudio2
+      value: 
+      objectReference: {fileID: 598042766}
+    - target: {fileID: 6744876179328656426, guid: d20968a0b1c521a409a65fa46fac48b5,
+        type: 3}
+      propertyPath: _menuSfxAudioSource
+      value: 
+      objectReference: {fileID: 598042767}
+    - target: {fileID: 6744876179328656426, guid: d20968a0b1c521a409a65fa46fac48b5,
+        type: 3}
+      propertyPath: _menuMusicAudioSource
       value: 
       objectReference: {fileID: 598042766}
     - target: {fileID: 6744876179328656427, guid: d20968a0b1c521a409a65fa46fac48b5,
@@ -16537,6 +16567,11 @@ PrefabInstance:
     - target: {fileID: 6744876179328656431, guid: d20968a0b1c521a409a65fa46fac48b5,
         type: 3}
       propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744876179328656431, guid: d20968a0b1c521a409a65fa46fac48b5,
+        type: 3}
+      propertyPath: m_Volume
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6744876179328656431, guid: d20968a0b1c521a409a65fa46fac48b5,

@@ -14,6 +14,12 @@ public class MusicManager : MonoBehaviour
     public AudioSource musicManagerAudio1; 
     public AudioSource musicManagerAudio2; 
     public AudioSource otherOne;
+
+    [SerializeField]
+    AudioSource _menuSfxAudioSource, _menuMusicAudioSource;
+
+    [Range(0f, 1f)]
+    [SerializeField] float musicVolume, sfxVolume;
     
     GameObject ON;
     SpriteRenderer audioOnButton;
@@ -51,6 +57,7 @@ public class MusicManager : MonoBehaviour
     void Start()
     {
         PlayerPrefs.SetInt("AudioState", 1);
+        
     }
     void Update()
     {
@@ -60,6 +67,9 @@ public class MusicManager : MonoBehaviour
         //audioOffButton = OFF.GetComponent<SpriteRenderer>();
 
         AudioCheckingUpdate();
+
+        _menuMusicAudioSource.volume = musicVolume;
+        _menuSfxAudioSource.volume = sfxVolume;
 
     }
 
@@ -133,34 +143,6 @@ public class MusicManager : MonoBehaviour
         isPlaying = true;       
     }
 
-    void AudioCheckingUpdate()                                                                                          
-    {
-        prefs = PlayerPrefs.GetInt("AudioState");   
-        // if (prefs == 1)
-        // {
-        //     TurnOnAllAudio();                                                                                    ///////////////////////////////////////////// More Audio Button stuff
-        //     if (hide)
-        //     {
-        //         audioOnButton.enabled = false;
-        //     }
-        //     else
-        //     {
-        //         audioOnButton.enabled = true;
-        //     }
-
-        // }
-        // else if (prefs == 0)
-        // {
-        //     TurnOffAllAudio();
-        //     if (hide)
-        //     {
-        //         audioOffButton.enabled = false;  
-        //     }
-        //     else
-        //     {
-        //         audioOffButton.enabled = true;
-        //     }
-        // }
-    }
+    void AudioCheckingUpdate() => prefs = PlayerPrefs.GetInt("AudioState");
    
 }
