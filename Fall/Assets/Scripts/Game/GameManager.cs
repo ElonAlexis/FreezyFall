@@ -145,6 +145,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;   
         MusicManager.instance.StopOtherOne();
         MusicManager.instance.MainMenuClip();
+        MusicManager.instance.LoadSettings();
         adIsPlayed = false;
     }
 

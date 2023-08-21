@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 
@@ -17,6 +18,12 @@ public class MusicManager : MonoBehaviour
 
     [SerializeField]
     AudioSource _menuSfxAudioSource, _menuMusicAudioSource;
+
+    [SerializeField]
+    AudioMixer _mixer;
+
+    [SerializeField]
+    Slider _musicSlider, _sfxSlider;
 
     [Range(0f, 1f)]
     [SerializeField] float musicVolume, sfxVolume;
@@ -39,6 +46,11 @@ public class MusicManager : MonoBehaviour
 
     public int prefs;
 
+    const string _mixerMusic = "MusicVolume";
+    const string _mixerSfx = "SfxVolume";
+    
+    const string _musicKey = "MusicVolumeKey";
+    const string _sfxKey = "SfxVolumeKey";
 
     void Awake()
     {
@@ -53,11 +65,19 @@ public class MusicManager : MonoBehaviour
         }
         //DontDestroyOnLoad(Audio);
         isPlaying = true;
+
+        _musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        _sfxSlider.onValueChanged.AddListener(SetSfxVolume);
+
+        LoadSettings();
     }
     void Start()
     {
         PlayerPrefs.SetInt("AudioState", 1);
-        
+
+        _musicSlider.value = PlayerPrefs.GetFloat(_musicKey);
+        _sfxSlider.value = PlayerPrefs.GetFloat(_sfxKey);
+
     }
     void Update()
     {
@@ -68,9 +88,34 @@ public class MusicManager : MonoBehaviour
 
         AudioCheckingUpdate();
 
-        _menuMusicAudioSource.volume = musicVolume;
-        _menuSfxAudioSource.volume = sfxVolume;
+        //_menuMusicAudioSource.volume = musicVolume;
+        //_menuSfxAudioSource.volume = sfxVolume;
+        Debug.Log("Here---------" + PlayerPrefs.GetFloat(_sfxKey));
+    }
 
+    void SetMusicVolume(float value)
+    {
+        _mixer.SetFloat(_mixerMusic, Mathf.Log10(value) * 20);
+    }
+
+    void SetSfxVolume(float value)
+    {
+        _mixer.SetFloat(_mixerSfx, Mathf.Log10(value) * 20);
+    }
+
+    public void SaveSettings()
+    {
+        PlayerPrefs.SetFloat(_musicKey, _musicSlider.value);
+        PlayerPrefs.SetFloat(_sfxKey, _sfxSlider.value);
+    }
+
+    public void LoadSettings()
+    {
+        float musicVolumeValue = PlayerPrefs.GetFloat(_musicKey, 1f);
+        float sfxVolumeValue = PlayerPrefs.GetFloat(_sfxKey, 1f);
+
+        _mixer.SetFloat(_musicKey, Mathf.Log10(musicVolumeValue) * 20);
+        _mixer.SetFloat(_sfxKey, Mathf.Log10(sfxVolumeValue) * 20);
     }
 
     public void MainMenuClip()
