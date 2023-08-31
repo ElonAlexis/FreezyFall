@@ -105,6 +105,7 @@ public class PlatformSpawner : MonoBehaviour
                 else
                 {
                     newPlatform = Instantiate(powerupPlatform, position, Quaternion.identity);
+                    Debug.Log("Power-up Spawned"); 
                 }
 
                 spawnCount = 0;
